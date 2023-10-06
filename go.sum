@@ -1,5 +1,7 @@
 github.com/RangelReale/debefix v0.5.3 h1:Pc5xVMA3tE9+qlKCceJwCwon0jPRMasYrL//Ouo1S3E=
 github.com/RangelReale/debefix v0.5.3/go.mod h1:FpBzBV6o6M9HGwZ2UQCgB599tUcoVcV+KbixbzjbAUI=
+github.com/RangelReale/debefix v0.5.4 h1:xJ6raadF7vgEgNf4muaq7l9NCp4GP28vaI8/Td61UTw=
+github.com/RangelReale/debefix v0.5.4/go.mod h1:FpBzBV6o6M9HGwZ2UQCgB599tUcoVcV+KbixbzjbAUI=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/fatih/color v1.10.0 h1:s36xzo75JdqLaaWoiEHk767eHiwo0598uUxyfiPkDsg=
 github.com/fatih/color v1.10.0/go.mod h1:ELkj/draVOlAH/xkhN6mQ50Qd0MPOk5AAr3maGEBuJM=

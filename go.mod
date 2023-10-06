@@ -3,7 +3,7 @@ module github.com/RangelReale/debefix-samples
 go 1.21.1
 
 require (
-	github.com/RangelReale/debefix v0.5.3 // indirect
+	github.com/RangelReale/debefix v0.5.4 // indirect
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/goccy/go-yaml v1.11.2 // indirect
 	github.com/google/uuid v1.3.1 // indirect

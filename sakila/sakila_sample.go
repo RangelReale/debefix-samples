@@ -1,11 +1,12 @@
 package main
 
 import (
-	"database/sql"
 	"errors"
 	"fmt"
 	"path/filepath"
 	"runtime"
+	"slices"
+	"strings"
 
 	"github.com/RangelReale/debefix"
 	dbsql "github.com/RangelReale/debefix/db/sql"
@@ -21,11 +22,11 @@ func main() {
 }
 
 func importFixtures() error {
-	db, err := sql.Open("pgx",
-		fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5478", "sakila"))
-	if err != nil {
-		return err
-	}
+	// db, err := sql.Open("pgx",
+	// 	fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5478", "sakila"))
+	// if err != nil {
+	// 	return err
+	// }
 
 	curDir, err := currentSourceDirectory()
 	if err != nil {
@@ -37,17 +38,37 @@ func importFixtures() error {
 		panic(err)
 	}
 
-	// wrap query interface so we can print the output statements
-	sqlQueryInterface := dbsql.NewSQLQueryInterface(db)
-	wrapQueryInterface := dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
-		return sqlQueryInterface.Query(query, returnFieldNames, args...)
-	})
-
-	// will send an INSERT SQL for each row to the db, taking table dependency in account for the correct order.
-	err = postgres.Resolve(wrapQueryInterface, data)
+	err = debefix.ResolveCheck(data)
 	if err != nil {
 		panic(err)
 	}
+
+	// // wrap query interface, so we can print the output statements
+	// sqlQueryInterface := dbsql.NewSQLQueryInterface(db)
+	// wrapQueryInterface := dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
+	// 	return sqlQueryInterface.Query(query, returnFieldNames, args...)
+	// })
+	//
+	// will send an INSERT SQL for each row to the db, taking table dependency in account for the correct order.
+	// err = postgres.Resolve(wrapQueryInterface, data)
+
+	insertCount := 0
+
+	debugQI := dbsql.DebugQueryInterface{}
+	err = postgres.Resolve(dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
+		insertCount++
+		return debugQI.Query(query, returnFieldNames, args...)
+	}), data, debefix.WithResolveTagsFunc(func(tableID string, rowTags []string) bool {
+		if strings.HasPrefix(tableID, "film") {
+			return slices.Contains(rowTags, "rate_r")
+		}
+		return true
+	}))
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("INSERTED: %d\n", insertCount)
 
 	return nil
 }
