@@ -95,6 +95,11 @@ func importData() error {
 		panic(err)
 	}
 
+	err = importTable(db, "film", sdata, filepath.Join(curDir, "..", "fixtures", "base", "film.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
 	err = importTable(db, "inventory", sdata, filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
 	if err != nil {
 		panic(err)
@@ -183,6 +188,15 @@ func importTable(db *sql.DB, tableName string, sdata []*specialData, outputFilen
 		if currentSpecialData != nil {
 			row["_dbfconfig"] = RowConfig{
 				RefID: currentSpecialData.RefID[row[currentSpecialData.Fieldname]],
+			}
+		} else {
+			for _, s := range sdata {
+				if sfd, ok := row[s.Fieldname]; ok {
+					row[s.Fieldname] = TaggedString{
+						Tag:   "!dbfexpr",
+						Value: fmt.Sprintf("refid:%s:%s:%s", s.Tablename, s.RefID[sfd], s.Fieldname),
+					}
+				}
 			}
 		}
 

@@ -2,2401 +2,2401 @@ city:
   rows:
   - city: A Corua (La Corua)
     city_id: 1
-    country_id: 87
+    country_id: !dbfexpr refid:country:spain:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Abha
     city_id: 2
-    country_id: 82
+    country_id: !dbfexpr refid:country:saudi_arabia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Abu Dhabi
     city_id: 3
-    country_id: 101
+    country_id: !dbfexpr refid:country:united_arab_emirates:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Acua
     city_id: 4
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Adana
     city_id: 5
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Addis Abeba
     city_id: 6
-    country_id: 31
+    country_id: !dbfexpr refid:country:ethiopia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Aden
     city_id: 7
-    country_id: 107
+    country_id: !dbfexpr refid:country:yemen:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Adoni
     city_id: 8
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ahmadnagar
     city_id: 9
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Akishima
     city_id: 10
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Akron
     city_id: 11
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: al-Ayn
     city_id: 12
-    country_id: 101
+    country_id: !dbfexpr refid:country:united_arab_emirates:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: al-Hawiya
     city_id: 13
-    country_id: 82
+    country_id: !dbfexpr refid:country:saudi_arabia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: al-Manama
     city_id: 14
-    country_id: 11
+    country_id: !dbfexpr refid:country:bahrain:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: al-Qadarif
     city_id: 15
-    country_id: 89
+    country_id: !dbfexpr refid:country:sudan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: al-Qatif
     city_id: 16
-    country_id: 82
+    country_id: !dbfexpr refid:country:saudi_arabia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Alessandria
     city_id: 17
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Allappuzha (Alleppey)
     city_id: 18
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Allende
     city_id: 19
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Almirante Brown
     city_id: 20
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Alvorada
     city_id: 21
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ambattur
     city_id: 22
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Amersfoort
     city_id: 23
-    country_id: 67
+    country_id: !dbfexpr refid:country:netherlands:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Amroha
     city_id: 24
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Angra dos Reis
     city_id: 25
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Anpolis
     city_id: 26
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Antofagasta
     city_id: 27
-    country_id: 22
+    country_id: !dbfexpr refid:country:chile:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Aparecida de Goinia
     city_id: 28
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Apeldoorn
     city_id: 29
-    country_id: 67
+    country_id: !dbfexpr refid:country:netherlands:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Araatuba
     city_id: 30
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Arak
     city_id: 31
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Arecibo
     city_id: 32
-    country_id: 77
+    country_id: !dbfexpr refid:country:puerto_rico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Arlington
     city_id: 33
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ashdod
     city_id: 34
-    country_id: 48
+    country_id: !dbfexpr refid:country:israel:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ashgabat
     city_id: 35
-    country_id: 98
+    country_id: !dbfexpr refid:country:turkmenistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ashqelon
     city_id: 36
-    country_id: 48
+    country_id: !dbfexpr refid:country:israel:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Asuncin
     city_id: 37
-    country_id: 73
+    country_id: !dbfexpr refid:country:paraguay:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Athenai
     city_id: 38
-    country_id: 39
+    country_id: !dbfexpr refid:country:greece:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Atinsk
     city_id: 39
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Atlixco
     city_id: 40
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Augusta-Richmond County
     city_id: 41
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Aurora
     city_id: 42
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Avellaneda
     city_id: 43
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bag
     city_id: 44
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Baha Blanca
     city_id: 45
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Baicheng
     city_id: 46
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Baiyin
     city_id: 47
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Baku
     city_id: 48
-    country_id: 10
+    country_id: !dbfexpr refid:country:azerbaijan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Balaiha
     city_id: 49
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Balikesir
     city_id: 50
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Balurghat
     city_id: 51
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bamenda
     city_id: 52
-    country_id: 19
+    country_id: !dbfexpr refid:country:cameroon:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bandar Seri Begawan
     city_id: 53
-    country_id: 16
+    country_id: !dbfexpr refid:country:brunei:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Banjul
     city_id: 54
-    country_id: 37
+    country_id: !dbfexpr refid:country:gambia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Barcelona
     city_id: 55
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Basel
     city_id: 56
-    country_id: 91
+    country_id: !dbfexpr refid:country:switzerland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bat Yam
     city_id: 57
-    country_id: 48
+    country_id: !dbfexpr refid:country:israel:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Batman
     city_id: 58
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Batna
     city_id: 59
-    country_id: 2
+    country_id: !dbfexpr refid:country:algeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Battambang
     city_id: 60
-    country_id: 18
+    country_id: !dbfexpr refid:country:cambodia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Baybay
     city_id: 61
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bayugan
     city_id: 62
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bchar
     city_id: 63
-    country_id: 2
+    country_id: !dbfexpr refid:country:algeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Beira
     city_id: 64
-    country_id: 63
+    country_id: !dbfexpr refid:country:mozambique:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bellevue
     city_id: 65
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Belm
     city_id: 66
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Benguela
     city_id: 67
-    country_id: 4
+    country_id: !dbfexpr refid:country:angola:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Beni-Mellal
     city_id: 68
-    country_id: 62
+    country_id: !dbfexpr refid:country:morocco:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Benin City
     city_id: 69
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bergamo
     city_id: 70
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Berhampore (Baharampur)
     city_id: 71
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bern
     city_id: 72
-    country_id: 91
+    country_id: !dbfexpr refid:country:switzerland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bhavnagar
     city_id: 73
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bhilwara
     city_id: 74
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bhimavaram
     city_id: 75
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bhopal
     city_id: 76
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bhusawal
     city_id: 77
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bijapur
     city_id: 78
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bilbays
     city_id: 79
-    country_id: 29
+    country_id: !dbfexpr refid:country:egypt:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Binzhou
     city_id: 80
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Birgunj
     city_id: 81
-    country_id: 66
+    country_id: !dbfexpr refid:country:nepal:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bislig
     city_id: 82
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Blumenau
     city_id: 83
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Boa Vista
     city_id: 84
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Boksburg
     city_id: 85
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Botosani
     city_id: 86
-    country_id: 78
+    country_id: !dbfexpr refid:country:romania:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Botshabelo
     city_id: 87
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bradford
     city_id: 88
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Braslia
     city_id: 89
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bratislava
     city_id: 90
-    country_id: 84
+    country_id: !dbfexpr refid:country:slovakia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Brescia
     city_id: 91
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Brest
     city_id: 92
-    country_id: 34
+    country_id: !dbfexpr refid:country:france:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Brindisi
     city_id: 93
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Brockton
     city_id: 94
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bucuresti
     city_id: 95
-    country_id: 78
+    country_id: !dbfexpr refid:country:romania:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Buenaventura
     city_id: 96
-    country_id: 24
+    country_id: !dbfexpr refid:country:colombia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Bydgoszcz
     city_id: 97
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cabuyao
     city_id: 98
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Callao
     city_id: 99
-    country_id: 74
+    country_id: !dbfexpr refid:country:peru:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cam Ranh
     city_id: 100
-    country_id: 105
+    country_id: !dbfexpr refid:country:vietnam:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cape Coral
     city_id: 101
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Caracas
     city_id: 102
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Carmen
     city_id: 103
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cavite
     city_id: 104
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cayenne
     city_id: 105
-    country_id: 35
+    country_id: !dbfexpr refid:country:french_guiana:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Celaya
     city_id: 106
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Chandrapur
     city_id: 107
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Changhwa
     city_id: 108
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Changzhou
     city_id: 109
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Chapra
     city_id: 110
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Charlotte Amalie
     city_id: 111
-    country_id: 106
+    country_id: !dbfexpr refid:country:virgin_islands,_u_s_:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Chatsworth
     city_id: 112
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cheju
     city_id: 113
-    country_id: 86
+    country_id: !dbfexpr refid:country:south_korea:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Chiayi
     city_id: 114
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Chisinau
     city_id: 115
-    country_id: 61
+    country_id: !dbfexpr refid:country:moldova:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Chungho
     city_id: 116
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cianjur
     city_id: 117
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ciomas
     city_id: 118
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ciparay
     city_id: 119
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Citrus Heights
     city_id: 120
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Citt del Vaticano
     city_id: 121
-    country_id: 41
+    country_id: !dbfexpr refid:country:holy_see_(vatican_city_state):country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ciudad del Este
     city_id: 122
-    country_id: 73
+    country_id: !dbfexpr refid:country:paraguay:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Clarksville
     city_id: 123
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Coacalco de Berriozbal
     city_id: 124
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Coatzacoalcos
     city_id: 125
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Compton
     city_id: 126
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Coquimbo
     city_id: 127
-    country_id: 22
+    country_id: !dbfexpr refid:country:chile:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Crdoba
     city_id: 128
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cuauhtmoc
     city_id: 129
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cuautla
     city_id: 130
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cuernavaca
     city_id: 131
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Cuman
     city_id: 132
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Czestochowa
     city_id: 133
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dadu
     city_id: 134
-    country_id: 72
+    country_id: !dbfexpr refid:country:pakistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dallas
     city_id: 135
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Datong
     city_id: 136
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Daugavpils
     city_id: 137
-    country_id: 54
+    country_id: !dbfexpr refid:country:latvia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Davao
     city_id: 138
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Daxian
     city_id: 139
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dayton
     city_id: 140
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Deba Habe
     city_id: 141
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Denizli
     city_id: 142
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dhaka
     city_id: 143
-    country_id: 12
+    country_id: !dbfexpr refid:country:bangladesh:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dhule (Dhulia)
     city_id: 144
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dongying
     city_id: 145
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Donostia-San Sebastin
     city_id: 146
-    country_id: 87
+    country_id: !dbfexpr refid:country:spain:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dos Quebradas
     city_id: 147
-    country_id: 24
+    country_id: !dbfexpr refid:country:colombia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Duisburg
     city_id: 148
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dundee
     city_id: 149
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Dzerzinsk
     city_id: 150
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ede
     city_id: 151
-    country_id: 67
+    country_id: !dbfexpr refid:country:netherlands:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Effon-Alaiye
     city_id: 152
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: El Alto
     city_id: 153
-    country_id: 14
+    country_id: !dbfexpr refid:country:bolivia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: El Fuerte
     city_id: 154
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: El Monte
     city_id: 155
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Elista
     city_id: 156
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Emeishan
     city_id: 157
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Emmen
     city_id: 158
-    country_id: 67
+    country_id: !dbfexpr refid:country:netherlands:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Enshi
     city_id: 159
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Erlangen
     city_id: 160
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Escobar
     city_id: 161
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Esfahan
     city_id: 162
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Eskisehir
     city_id: 163
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Etawah
     city_id: 164
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ezeiza
     city_id: 165
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ezhou
     city_id: 166
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Faaa
     city_id: 167
-    country_id: 36
+    country_id: !dbfexpr refid:country:french_polynesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Fengshan
     city_id: 168
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Firozabad
     city_id: 169
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Florencia
     city_id: 170
-    country_id: 24
+    country_id: !dbfexpr refid:country:colombia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Fontana
     city_id: 171
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Fukuyama
     city_id: 172
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Funafuti
     city_id: 173
-    country_id: 99
+    country_id: !dbfexpr refid:country:tuvalu:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Fuyu
     city_id: 174
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Fuzhou
     city_id: 175
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gandhinagar
     city_id: 176
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Garden Grove
     city_id: 177
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Garland
     city_id: 178
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gatineau
     city_id: 179
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gaziantep
     city_id: 180
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gijn
     city_id: 181
-    country_id: 87
+    country_id: !dbfexpr refid:country:spain:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gingoog
     city_id: 182
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Goinia
     city_id: 183
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gorontalo
     city_id: 184
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Grand Prairie
     city_id: 185
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Graz
     city_id: 186
-    country_id: 9
+    country_id: !dbfexpr refid:country:austria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Greensboro
     city_id: 187
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Guadalajara
     city_id: 188
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Guaruj
     city_id: 189
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: guas Lindas de Gois
     city_id: 190
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Gulbarga
     city_id: 191
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hagonoy
     city_id: 192
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Haining
     city_id: 193
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Haiphong
     city_id: 194
-    country_id: 105
+    country_id: !dbfexpr refid:country:vietnam:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Haldia
     city_id: 195
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Halifax
     city_id: 196
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Halisahar
     city_id: 197
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Halle/Saale
     city_id: 198
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hami
     city_id: 199
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hamilton
     city_id: 200
-    country_id: 68
+    country_id: !dbfexpr refid:country:new_zealand:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hanoi
     city_id: 201
-    country_id: 105
+    country_id: !dbfexpr refid:country:vietnam:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hidalgo
     city_id: 202
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Higashiosaka
     city_id: 203
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hino
     city_id: 204
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hiroshima
     city_id: 205
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hodeida
     city_id: 206
-    country_id: 107
+    country_id: !dbfexpr refid:country:yemen:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hohhot
     city_id: 207
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hoshiarpur
     city_id: 208
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hsichuh
     city_id: 209
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Huaian
     city_id: 210
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hubli-Dharwad
     city_id: 211
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Huejutla de Reyes
     city_id: 212
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Huixquilucan
     city_id: 213
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Hunuco
     city_id: 214
-    country_id: 74
+    country_id: !dbfexpr refid:country:peru:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ibirit
     city_id: 215
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Idfu
     city_id: 216
-    country_id: 29
+    country_id: !dbfexpr refid:country:egypt:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ife
     city_id: 217
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ikerre
     city_id: 218
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Iligan
     city_id: 219
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ilorin
     city_id: 220
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Imus
     city_id: 221
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Inegl
     city_id: 222
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ipoh
     city_id: 223
-    country_id: 59
+    country_id: !dbfexpr refid:country:malaysia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Isesaki
     city_id: 224
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ivanovo
     city_id: 225
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Iwaki
     city_id: 226
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Iwakuni
     city_id: 227
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Iwatsuki
     city_id: 228
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Izumisano
     city_id: 229
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jaffna
     city_id: 230
-    country_id: 88
+    country_id: !dbfexpr refid:country:sri_lanka:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jaipur
     city_id: 231
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jakarta
     city_id: 232
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jalib al-Shuyukh
     city_id: 233
-    country_id: 53
+    country_id: !dbfexpr refid:country:kuwait:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jamalpur
     city_id: 234
-    country_id: 12
+    country_id: !dbfexpr refid:country:bangladesh:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jaroslavl
     city_id: 235
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jastrzebie-Zdrj
     city_id: 236
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jedda
     city_id: 237
-    country_id: 82
+    country_id: !dbfexpr refid:country:saudi_arabia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jelets
     city_id: 238
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jhansi
     city_id: 239
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jinchang
     city_id: 240
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jining
     city_id: 241
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jinzhou
     city_id: 242
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jodhpur
     city_id: 243
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Johannesburg
     city_id: 244
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Joliet
     city_id: 245
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jos Azueta
     city_id: 246
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Juazeiro do Norte
     city_id: 247
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Juiz de Fora
     city_id: 248
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Junan
     city_id: 249
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Jurez
     city_id: 250
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kabul
     city_id: 251
-    country_id: 1
+    country_id: !dbfexpr refid:country:afghanistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kaduna
     city_id: 252
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kakamigahara
     city_id: 253
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kaliningrad
     city_id: 254
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kalisz
     city_id: 255
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kamakura
     city_id: 256
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kamarhati
     city_id: 257
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kamjanets-Podilskyi
     city_id: 258
-    country_id: 100
+    country_id: !dbfexpr refid:country:ukraine:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kamyin
     city_id: 259
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kanazawa
     city_id: 260
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kanchrapara
     city_id: 261
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kansas City
     city_id: 262
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Karnal
     city_id: 263
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Katihar
     city_id: 264
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kermanshah
     city_id: 265
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kilis
     city_id: 266
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kimberley
     city_id: 267
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kimchon
     city_id: 268
-    country_id: 86
+    country_id: !dbfexpr refid:country:south_korea:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kingstown
     city_id: 269
-    country_id: 81
+    country_id: !dbfexpr refid:country:saint_vincent_and_the_grenadines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kirovo-Tepetsk
     city_id: 270
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kisumu
     city_id: 271
-    country_id: 52
+    country_id: !dbfexpr refid:country:kenya:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kitwe
     city_id: 272
-    country_id: 109
+    country_id: !dbfexpr refid:country:zambia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Klerksdorp
     city_id: 273
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kolpino
     city_id: 274
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Konotop
     city_id: 275
-    country_id: 100
+    country_id: !dbfexpr refid:country:ukraine:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Koriyama
     city_id: 276
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Korla
     city_id: 277
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Korolev
     city_id: 278
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kowloon and New Kowloon
     city_id: 279
-    country_id: 42
+    country_id: !dbfexpr refid:country:hong_kong:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kragujevac
     city_id: 280
-    country_id: 108
+    country_id: !dbfexpr refid:country:yugoslavia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ktahya
     city_id: 281
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kuching
     city_id: 282
-    country_id: 59
+    country_id: !dbfexpr refid:country:malaysia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kumbakonam
     city_id: 283
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kurashiki
     city_id: 284
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kurgan
     city_id: 285
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kursk
     city_id: 286
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Kuwana
     city_id: 287
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: La Paz
     city_id: 288
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: La Plata
     city_id: 289
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: La Romana
     city_id: 290
-    country_id: 27
+    country_id: !dbfexpr refid:country:dominican_republic:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Laiwu
     city_id: 291
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lancaster
     city_id: 292
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Laohekou
     city_id: 293
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lapu-Lapu
     city_id: 294
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Laredo
     city_id: 295
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lausanne
     city_id: 296
-    country_id: 91
+    country_id: !dbfexpr refid:country:switzerland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Le Mans
     city_id: 297
-    country_id: 34
+    country_id: !dbfexpr refid:country:france:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lengshuijiang
     city_id: 298
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Leshan
     city_id: 299
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lethbridge
     city_id: 300
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lhokseumawe
     city_id: 301
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Liaocheng
     city_id: 302
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Liepaja
     city_id: 303
-    country_id: 54
+    country_id: !dbfexpr refid:country:latvia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lilongwe
     city_id: 304
-    country_id: 58
+    country_id: !dbfexpr refid:country:malawi:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lima
     city_id: 305
-    country_id: 74
+    country_id: !dbfexpr refid:country:peru:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lincoln
     city_id: 306
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Linz
     city_id: 307
-    country_id: 9
+    country_id: !dbfexpr refid:country:austria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lipetsk
     city_id: 308
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Livorno
     city_id: 309
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ljubertsy
     city_id: 310
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Loja
     city_id: 311
-    country_id: 28
+    country_id: !dbfexpr refid:country:ecuador:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: London
     city_id: 312
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: London
     city_id: 313
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lublin
     city_id: 314
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lubumbashi
     city_id: 315
-    country_id: 25
+    country_id: !dbfexpr refid:country:congo,_the_democratic_republic_of_the:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Lungtan
     city_id: 316
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Luzinia
     city_id: 317
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Madiun
     city_id: 318
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mahajanga
     city_id: 319
-    country_id: 57
+    country_id: !dbfexpr refid:country:madagascar:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Maikop
     city_id: 320
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Malm
     city_id: 321
-    country_id: 90
+    country_id: !dbfexpr refid:country:sweden:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Manchester
     city_id: 322
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mandaluyong
     city_id: 323
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mandi Bahauddin
     city_id: 324
-    country_id: 72
+    country_id: !dbfexpr refid:country:pakistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mannheim
     city_id: 325
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Maracabo
     city_id: 326
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mardan
     city_id: 327
-    country_id: 72
+    country_id: !dbfexpr refid:country:pakistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Maring
     city_id: 328
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Masqat
     city_id: 329
-    country_id: 71
+    country_id: !dbfexpr refid:country:oman:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Matamoros
     city_id: 330
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Matsue
     city_id: 331
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Meixian
     city_id: 332
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Memphis
     city_id: 333
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Merlo
     city_id: 334
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mexicali
     city_id: 335
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Miraj
     city_id: 336
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mit Ghamr
     city_id: 337
-    country_id: 29
+    country_id: !dbfexpr refid:country:egypt:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Miyakonojo
     city_id: 338
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mogiljov
     city_id: 339
-    country_id: 13
+    country_id: !dbfexpr refid:country:belarus:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Molodetno
     city_id: 340
-    country_id: 13
+    country_id: !dbfexpr refid:country:belarus:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Monclova
     city_id: 341
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Monywa
     city_id: 342
-    country_id: 64
+    country_id: !dbfexpr refid:country:myanmar:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Moscow
     city_id: 343
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mosul
     city_id: 344
-    country_id: 47
+    country_id: !dbfexpr refid:country:iraq:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mukateve
     city_id: 345
-    country_id: 100
+    country_id: !dbfexpr refid:country:ukraine:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Munger (Monghyr)
     city_id: 346
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mwanza
     city_id: 347
-    country_id: 93
+    country_id: !dbfexpr refid:country:tanzania:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mwene-Ditu
     city_id: 348
-    country_id: 25
+    country_id: !dbfexpr refid:country:congo,_the_democratic_republic_of_the:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Myingyan
     city_id: 349
-    country_id: 64
+    country_id: !dbfexpr refid:country:myanmar:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Mysore
     city_id: 350
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Naala-Porto
     city_id: 351
-    country_id: 63
+    country_id: !dbfexpr refid:country:mozambique:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nabereznyje Telny
     city_id: 352
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nador
     city_id: 353
-    country_id: 62
+    country_id: !dbfexpr refid:country:morocco:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nagaon
     city_id: 354
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nagareyama
     city_id: 355
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Najafabad
     city_id: 356
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Naju
     city_id: 357
-    country_id: 86
+    country_id: !dbfexpr refid:country:south_korea:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nakhon Sawan
     city_id: 358
-    country_id: 94
+    country_id: !dbfexpr refid:country:thailand:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nam Dinh
     city_id: 359
-    country_id: 105
+    country_id: !dbfexpr refid:country:vietnam:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Namibe
     city_id: 360
-    country_id: 4
+    country_id: !dbfexpr refid:country:angola:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nantou
     city_id: 361
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nanyang
     city_id: 362
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: NDjamna
     city_id: 363
-    country_id: 21
+    country_id: !dbfexpr refid:country:chad:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Newcastle
     city_id: 364
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nezahualcyotl
     city_id: 365
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nha Trang
     city_id: 366
-    country_id: 105
+    country_id: !dbfexpr refid:country:vietnam:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Niznekamsk
     city_id: 367
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Novi Sad
     city_id: 368
-    country_id: 108
+    country_id: !dbfexpr refid:country:yugoslavia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Novoterkassk
     city_id: 369
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nukualofa
     city_id: 370
-    country_id: 95
+    country_id: !dbfexpr refid:country:tonga:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nuuk
     city_id: 371
-    country_id: 40
+    country_id: !dbfexpr refid:country:greenland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Nyeri
     city_id: 372
-    country_id: 52
+    country_id: !dbfexpr refid:country:kenya:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ocumare del Tuy
     city_id: 373
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ogbomosho
     city_id: 374
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Okara
     city_id: 375
-    country_id: 72
+    country_id: !dbfexpr refid:country:pakistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Okayama
     city_id: 376
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Okinawa
     city_id: 377
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Olomouc
     city_id: 378
-    country_id: 26
+    country_id: !dbfexpr refid:country:czech_republic:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Omdurman
     city_id: 379
-    country_id: 89
+    country_id: !dbfexpr refid:country:sudan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Omiya
     city_id: 380
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ondo
     city_id: 381
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Onomichi
     city_id: 382
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Oshawa
     city_id: 383
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Osmaniye
     city_id: 384
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: ostka
     city_id: 385
-    country_id: 100
+    country_id: !dbfexpr refid:country:ukraine:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Otsu
     city_id: 386
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Oulu
     city_id: 387
-    country_id: 33
+    country_id: !dbfexpr refid:country:finland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ourense (Orense)
     city_id: 388
-    country_id: 87
+    country_id: !dbfexpr refid:country:spain:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Owo
     city_id: 389
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Oyo
     city_id: 390
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ozamis
     city_id: 391
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Paarl
     city_id: 392
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pachuca de Soto
     city_id: 393
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pak Kret
     city_id: 394
-    country_id: 94
+    country_id: !dbfexpr refid:country:thailand:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Palghat (Palakkad)
     city_id: 395
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pangkal Pinang
     city_id: 396
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Papeete
     city_id: 397
-    country_id: 36
+    country_id: !dbfexpr refid:country:french_polynesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Parbhani
     city_id: 398
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pathankot
     city_id: 399
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Patiala
     city_id: 400
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Patras
     city_id: 401
-    country_id: 39
+    country_id: !dbfexpr refid:country:greece:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pavlodar
     city_id: 402
-    country_id: 51
+    country_id: !dbfexpr refid:country:kazakstan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pemalang
     city_id: 403
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Peoria
     city_id: 404
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pereira
     city_id: 405
-    country_id: 24
+    country_id: !dbfexpr refid:country:colombia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Phnom Penh
     city_id: 406
-    country_id: 18
+    country_id: !dbfexpr refid:country:cambodia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pingxiang
     city_id: 407
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pjatigorsk
     city_id: 408
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Plock
     city_id: 409
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Po
     city_id: 410
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ponce
     city_id: 411
-    country_id: 77
+    country_id: !dbfexpr refid:country:puerto_rico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pontianak
     city_id: 412
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Poos de Caldas
     city_id: 413
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Portoviejo
     city_id: 414
-    country_id: 28
+    country_id: !dbfexpr refid:country:ecuador:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Probolinggo
     city_id: 415
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pudukkottai
     city_id: 416
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pune
     city_id: 417
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Purnea (Purnia)
     city_id: 418
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Purwakarta
     city_id: 419
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Pyongyang
     city_id: 420
-    country_id: 70
+    country_id: !dbfexpr refid:country:north_korea:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Qalyub
     city_id: 421
-    country_id: 29
+    country_id: !dbfexpr refid:country:egypt:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Qinhuangdao
     city_id: 422
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Qomsheh
     city_id: 423
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Quilmes
     city_id: 424
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rae Bareli
     city_id: 425
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rajkot
     city_id: 426
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rampur
     city_id: 427
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rancagua
     city_id: 428
-    country_id: 22
+    country_id: !dbfexpr refid:country:chile:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ranchi
     city_id: 429
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Richmond Hill
     city_id: 430
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rio Claro
     city_id: 431
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rizhao
     city_id: 432
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Roanoke
     city_id: 433
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Robamba
     city_id: 434
-    country_id: 28
+    country_id: !dbfexpr refid:country:ecuador:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rockford
     city_id: 435
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ruse
     city_id: 436
-    country_id: 17
+    country_id: !dbfexpr refid:country:bulgaria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Rustenburg
     city_id: 437
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: s-Hertogenbosch
     city_id: 438
-    country_id: 67
+    country_id: !dbfexpr refid:country:netherlands:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Saarbrcken
     city_id: 439
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sagamihara
     city_id: 440
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Saint Louis
     city_id: 441
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Saint-Denis
     city_id: 442
-    country_id: 79
+    country_id: !dbfexpr refid:country:runion:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sal
     city_id: 443
-    country_id: 62
+    country_id: !dbfexpr refid:country:morocco:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Salala
     city_id: 444
-    country_id: 71
+    country_id: !dbfexpr refid:country:oman:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Salamanca
     city_id: 445
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Salinas
     city_id: 446
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Salzburg
     city_id: 447
-    country_id: 9
+    country_id: !dbfexpr refid:country:austria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sambhal
     city_id: 448
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: San Bernardino
     city_id: 449
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: San Felipe de Puerto Plata
     city_id: 450
-    country_id: 27
+    country_id: !dbfexpr refid:country:dominican_republic:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: San Felipe del Progreso
     city_id: 451
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: San Juan Bautista Tuxtepec
     city_id: 452
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: San Lorenzo
     city_id: 453
-    country_id: 73
+    country_id: !dbfexpr refid:country:paraguay:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: San Miguel de Tucumn
     city_id: 454
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sanaa
     city_id: 455
-    country_id: 107
+    country_id: !dbfexpr refid:country:yemen:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Santa Brbara dOeste
     city_id: 456
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Santa F
     city_id: 457
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Santa Rosa
     city_id: 458
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Santiago de Compostela
     city_id: 459
-    country_id: 87
+    country_id: !dbfexpr refid:country:spain:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Santiago de los Caballeros
     city_id: 460
-    country_id: 27
+    country_id: !dbfexpr refid:country:dominican_republic:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Santo Andr
     city_id: 461
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sanya
     city_id: 462
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sasebo
     city_id: 463
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Satna
     city_id: 464
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sawhaj
     city_id: 465
-    country_id: 29
+    country_id: !dbfexpr refid:country:egypt:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Serpuhov
     city_id: 466
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shahr-e Kord
     city_id: 467
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shanwei
     city_id: 468
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shaoguan
     city_id: 469
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sharja
     city_id: 470
-    country_id: 101
+    country_id: !dbfexpr refid:country:united_arab_emirates:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shenzhen
     city_id: 471
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shikarpur
     city_id: 472
-    country_id: 72
+    country_id: !dbfexpr refid:country:pakistan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shimoga
     city_id: 473
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shimonoseki
     city_id: 474
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shivapuri
     city_id: 475
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Shubra al-Khayma
     city_id: 476
-    country_id: 29
+    country_id: !dbfexpr refid:country:egypt:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Siegen
     city_id: 477
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Siliguri (Shiliguri)
     city_id: 478
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Simferopol
     city_id: 479
-    country_id: 100
+    country_id: !dbfexpr refid:country:ukraine:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sincelejo
     city_id: 480
-    country_id: 24
+    country_id: !dbfexpr refid:country:colombia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sirjan
     city_id: 481
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sivas
     city_id: 482
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Skikda
     city_id: 483
-    country_id: 2
+    country_id: !dbfexpr refid:country:algeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Smolensk
     city_id: 484
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: So Bernardo do Campo
     city_id: 485
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: So Leopoldo
     city_id: 486
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sogamoso
     city_id: 487
-    country_id: 24
+    country_id: !dbfexpr refid:country:colombia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sokoto
     city_id: 488
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Songkhla
     city_id: 489
-    country_id: 94
+    country_id: !dbfexpr refid:country:thailand:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sorocaba
     city_id: 490
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Soshanguve
     city_id: 491
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sousse
     city_id: 492
-    country_id: 96
+    country_id: !dbfexpr refid:country:tunisia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: South Hill
     city_id: 493
-    country_id: 5
+    country_id: !dbfexpr refid:country:anguilla:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Southampton
     city_id: 494
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Southend-on-Sea
     city_id: 495
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Southport
     city_id: 496
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Springs
     city_id: 497
-    country_id: 85
+    country_id: !dbfexpr refid:country:south_africa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Stara Zagora
     city_id: 498
-    country_id: 17
+    country_id: !dbfexpr refid:country:bulgaria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sterling Heights
     city_id: 499
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Stockport
     city_id: 500
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sucre
     city_id: 501
-    country_id: 14
+    country_id: !dbfexpr refid:country:bolivia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Suihua
     city_id: 502
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sullana
     city_id: 503
-    country_id: 74
+    country_id: !dbfexpr refid:country:peru:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sultanbeyli
     city_id: 504
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sumqayit
     city_id: 505
-    country_id: 10
+    country_id: !dbfexpr refid:country:azerbaijan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sumy
     city_id: 506
-    country_id: 100
+    country_id: !dbfexpr refid:country:ukraine:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sungai Petani
     city_id: 507
-    country_id: 59
+    country_id: !dbfexpr refid:country:malaysia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Sunnyvale
     city_id: 508
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Surakarta
     city_id: 509
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Syktyvkar
     city_id: 510
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Syrakusa
     city_id: 511
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Szkesfehrvr
     city_id: 512
-    country_id: 43
+    country_id: !dbfexpr refid:country:hungary:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tabora
     city_id: 513
-    country_id: 93
+    country_id: !dbfexpr refid:country:tanzania:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tabriz
     city_id: 514
-    country_id: 46
+    country_id: !dbfexpr refid:country:iran:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tabuk
     city_id: 515
-    country_id: 82
+    country_id: !dbfexpr refid:country:saudi_arabia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tafuna
     city_id: 516
-    country_id: 3
+    country_id: !dbfexpr refid:country:american_samoa:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Taguig
     city_id: 517
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Taizz
     city_id: 518
-    country_id: 107
+    country_id: !dbfexpr refid:country:yemen:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Talavera
     city_id: 519
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tallahassee
     city_id: 520
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tama
     city_id: 521
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tambaram
     city_id: 522
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tanauan
     city_id: 523
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tandil
     city_id: 524
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tangail
     city_id: 525
-    country_id: 12
+    country_id: !dbfexpr refid:country:bangladesh:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tanshui
     city_id: 526
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tanza
     city_id: 527
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tarlac
     city_id: 528
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tarsus
     city_id: 529
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tartu
     city_id: 530
-    country_id: 30
+    country_id: !dbfexpr refid:country:estonia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Teboksary
     city_id: 531
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tegal
     city_id: 532
-    country_id: 45
+    country_id: !dbfexpr refid:country:indonesia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tel Aviv-Jaffa
     city_id: 533
-    country_id: 48
+    country_id: !dbfexpr refid:country:israel:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tete
     city_id: 534
-    country_id: 63
+    country_id: !dbfexpr refid:country:mozambique:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tianjin
     city_id: 535
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tiefa
     city_id: 536
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tieli
     city_id: 537
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tokat
     city_id: 538
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tonghae
     city_id: 539
-    country_id: 86
+    country_id: !dbfexpr refid:country:south_korea:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tongliao
     city_id: 540
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Torren
     city_id: 541
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Touliu
     city_id: 542
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Toulon
     city_id: 543
-    country_id: 34
+    country_id: !dbfexpr refid:country:france:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Toulouse
     city_id: 544
-    country_id: 34
+    country_id: !dbfexpr refid:country:france:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Trshavn
     city_id: 545
-    country_id: 32
+    country_id: !dbfexpr refid:country:faroe_islands:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tsaotun
     city_id: 546
-    country_id: 92
+    country_id: !dbfexpr refid:country:taiwan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tsuyama
     city_id: 547
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tuguegarao
     city_id: 548
-    country_id: 75
+    country_id: !dbfexpr refid:country:philippines:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Tychy
     city_id: 549
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Udaipur
     city_id: 550
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Udine
     city_id: 551
-    country_id: 49
+    country_id: !dbfexpr refid:country:italy:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ueda
     city_id: 552
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Uijongbu
     city_id: 553
-    country_id: 86
+    country_id: !dbfexpr refid:country:south_korea:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Uluberia
     city_id: 554
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Urawa
     city_id: 555
-    country_id: 50
+    country_id: !dbfexpr refid:country:japan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Uruapan
     city_id: 556
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Usak
     city_id: 557
-    country_id: 97
+    country_id: !dbfexpr refid:country:turkey:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Usolje-Sibirskoje
     city_id: 558
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Uttarpara-Kotrung
     city_id: 559
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vaduz
     city_id: 560
-    country_id: 55
+    country_id: !dbfexpr refid:country:liechtenstein:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Valencia
     city_id: 561
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Valle de la Pascua
     city_id: 562
-    country_id: 104
+    country_id: !dbfexpr refid:country:venezuela:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Valle de Santiago
     city_id: 563
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Valparai
     city_id: 564
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vancouver
     city_id: 565
-    country_id: 20
+    country_id: !dbfexpr refid:country:canada:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Varanasi (Benares)
     city_id: 566
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vicente Lpez
     city_id: 567
-    country_id: 6
+    country_id: !dbfexpr refid:country:argentina:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vijayawada
     city_id: 568
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vila Velha
     city_id: 569
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vilnius
     city_id: 570
-    country_id: 56
+    country_id: !dbfexpr refid:country:lithuania:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vinh
     city_id: 571
-    country_id: 105
+    country_id: !dbfexpr refid:country:vietnam:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Vitria de Santo Anto
     city_id: 572
-    country_id: 15
+    country_id: !dbfexpr refid:country:brazil:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Warren
     city_id: 573
-    country_id: 103
+    country_id: !dbfexpr refid:country:united_states:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Weifang
     city_id: 574
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Witten
     city_id: 575
-    country_id: 38
+    country_id: !dbfexpr refid:country:germany:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Woodridge
     city_id: 576
-    country_id: 8
+    country_id: !dbfexpr refid:country:australia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Wroclaw
     city_id: 577
-    country_id: 76
+    country_id: !dbfexpr refid:country:poland:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Xiangfan
     city_id: 578
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Xiangtan
     city_id: 579
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Xintai
     city_id: 580
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Xinxiang
     city_id: 581
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yamuna Nagar
     city_id: 582
-    country_id: 44
+    country_id: !dbfexpr refid:country:india:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yangor
     city_id: 583
-    country_id: 65
+    country_id: !dbfexpr refid:country:nauru:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yantai
     city_id: 584
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yaound
     city_id: 585
-    country_id: 19
+    country_id: !dbfexpr refid:country:cameroon:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yerevan
     city_id: 586
-    country_id: 7
+    country_id: !dbfexpr refid:country:armenia:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yinchuan
     city_id: 587
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yingkou
     city_id: 588
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: York
     city_id: 589
-    country_id: 102
+    country_id: !dbfexpr refid:country:united_kingdom:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yuncheng
     city_id: 590
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Yuzhou
     city_id: 591
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zalantun
     city_id: 592
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zanzibar
     city_id: 593
-    country_id: 93
+    country_id: !dbfexpr refid:country:tanzania:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zaoyang
     city_id: 594
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zapopan
     city_id: 595
-    country_id: 60
+    country_id: !dbfexpr refid:country:mexico:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zaria
     city_id: 596
-    country_id: 69
+    country_id: !dbfexpr refid:country:nigeria:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zeleznogorsk
     city_id: 597
-    country_id: 80
+    country_id: !dbfexpr refid:country:russian_federation:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zhezqazghan
     city_id: 598
-    country_id: 51
+    country_id: !dbfexpr refid:country:kazakstan:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Zhoushan
     city_id: 599
-    country_id: 23
+    country_id: !dbfexpr refid:country:china:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
   - city: Ziguinchor
     city_id: 600
-    country_id: 83
+    country_id: !dbfexpr refid:country:senegal:country_id
     last_update: !!timestamp 2006-02-15T04:45:25Z
