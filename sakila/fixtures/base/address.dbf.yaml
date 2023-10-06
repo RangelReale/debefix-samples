@@ -1,4 +1,7 @@
 address:
+  config:
+    depends:
+    - city
   rows:
   - address: 47 MySakila Drive
     address2: null

@@ -55,77 +55,67 @@ func importData() error {
 		panic(err)
 	}
 
-	err = importTable(db, "language", sdata, filepath.Join(curDir, "..", "fixtures", "base", "language.dbf.yaml"))
+	err = importTable(db, "language", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "language.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "country", sdata, filepath.Join(curDir, "..", "fixtures", "base", "country.dbf.yaml"))
+	err = importTable(db, "country", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "country.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "city", sdata, filepath.Join(curDir, "..", "fixtures", "base", "city.dbf.yaml"))
+	err = importTable(db, "city", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "city.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "address", sdata, filepath.Join(curDir, "..", "fixtures", "base", "address.dbf.yaml"))
+	err = importTable(db, "address", []string{"city"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "address.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "actor", sdata, filepath.Join(curDir, "..", "fixtures", "base", "actor.dbf.yaml"))
+	err = importTable(db, "actor", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "actor.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "staff", sdata, filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
+	err = importTable(db, "staff", []string{"address", "store"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "store", sdata, filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
+	err = importTable(db, "store", []string{"address"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "category", sdata, filepath.Join(curDir, "..", "fixtures", "base", "category.dbf.yaml"))
+	err = importTable(db, "category", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "category.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "film", sdata, filepath.Join(curDir, "..", "fixtures", "base", "film.dbf.yaml"))
+	err = importTable(db, "film", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "film.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "inventory", sdata, filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
+	err = importTable(db, "customer", []string{"store", "address"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "film_actor", sdata, filepath.Join(curDir, "..", "fixtures", "base", "film_actor.dbf.yaml"))
-	if err != nil {
-		panic(err)
-	}
+	// err = importTable(db, "inventory", []string{"film", "store"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	err = importTable(db, "film_category", sdata, filepath.Join(curDir, "..", "fixtures", "base", "film_category.dbf.yaml"))
-	if err != nil {
-		panic(err)
-	}
-
-	err = importTable(db, "customer", sdata, filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
-	if err != nil {
-		panic(err)
-	}
-
-	// err = importTable(db, "rental", sdata, filepath.Join(curDir, "..", "fixtures", "base", "rental.dbf.yaml"))
+	// err = importTable(db, "rental", []string{"inventory", "customer", "staff"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "rental.dbf.yaml"))
 	// if err != nil {
 	// 	panic(err)
 	// }
 	//
-	// err = importTable(db, "payment", sdata, filepath.Join(curDir, "..", "fixtures", "base", "payment.dbf.yaml"))
+	// err = importTable(db, "payment", []string{"customer", "staff", "rental"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "payment.dbf.yaml"))
 	// if err != nil {
 	// 	panic(err)
 	// }
@@ -162,13 +152,56 @@ func getSpecialData(db *sql.DB, tableName string, fieldName string, textFieldNam
 	return sdata, nil
 }
 
-func importTable(db *sql.DB, tableName string, sdata []*specialData, outputFilename string) error {
-	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s"`, tableName))
+func importTable(db *sql.DB, tableName string, deps []string, sdata []*specialData, outputFilename string) error {
+	data, err := importTableData(db, tableName, sdata)
 	if err != nil {
 		return err
 	}
+
+	data[tableName].Config.Depends = deps
+
+	f, err := os.Create(outputFilename)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	enc := yaml.NewEncoder(f)
+	err = enc.Encode(data)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func importTableData(db *sql.DB, tableName string, sdata []*specialData) (Data, error) {
+	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s"`, tableName))
+	if err != nil {
+		return nil, err
+	}
 	defer rows.Close()
 
+	return importTableRows(db, rows, tableName, sdata, nil)
+}
+
+func importTableDataFilmCategory(db *sql.DB, filmID any, sdata []*specialData) (Data, error) {
+	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s" WHERE "film_id" = $1`, "film_category"), filmID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	return importTableRows(db, rows, "film_category", sdata, func(row Row) error {
+		row["film_id"] = TaggedString{
+			Tag:   "!dbfexpr",
+			Value: "parent:film_id",
+		}
+		return nil
+	})
+}
+
+func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*specialData, customize func(row Row) error) (Data, error) {
 	var currentSpecialData *specialData
 	for _, s := range sdata {
 		if s.Tablename == tableName {
@@ -182,7 +215,7 @@ func importTable(db *sql.DB, tableName string, sdata []*specialData, outputFilen
 	for rows.Next() {
 		row, err := rowToMap(rows)
 		if err != nil {
-			return err
+			return nil, err
 		}
 
 		if currentSpecialData != nil {
@@ -200,30 +233,37 @@ func importTable(db *sql.DB, tableName string, sdata []*specialData, outputFilen
 			}
 		}
 
+		deps := Data{}
+
+		if tableName == "film" {
+			filmCategoryData, err := importTableDataFilmCategory(db, row["film_id"], sdata)
+			if err != nil {
+				return nil, err
+			}
+			deps["film_category"] = filmCategoryData["film_category"]
+		}
+
+		if len(deps) > 0 {
+			row["_dbfdeps"] = deps
+		}
+
+		if customize != nil {
+			err = customize(row)
+			if err != nil {
+				return nil, err
+			}
+		}
+
 		table.Rows = append(table.Rows, row)
 	}
 
 	if rows.Err() != nil {
-		return rows.Err()
+		return nil, rows.Err()
 	}
 
-	data := Data{
+	return Data{
 		tableName: table,
-	}
-
-	f, err := os.Create(outputFilename)
-	if err != nil {
-		return err
-	}
-	defer f.Close()
-
-	enc := yaml.NewEncoder(f)
-	err = enc.Encode(data)
-	if err != nil {
-		return err
-	}
-
-	return nil
+	}, nil
 }
 
 func currentSourceDirectory() (string, error) {

@@ -1,4 +1,8 @@
 staff:
+  config:
+    depends:
+    - address
+    - store
   rows:
   - active: true
     address_id: 3

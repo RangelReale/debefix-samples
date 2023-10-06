@@ -1,4 +1,7 @@
 store:
+  config:
+    depends:
+    - address
   rows:
   - address_id: 1
     last_update: !!timestamp 2006-02-15T04:57:12Z

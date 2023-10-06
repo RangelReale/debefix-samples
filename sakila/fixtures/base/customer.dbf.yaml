@@ -1,4 +1,8 @@
 customer:
+  config:
+    depends:
+    - store
+    - address
   rows:
   - active: 1
     activebool: true
