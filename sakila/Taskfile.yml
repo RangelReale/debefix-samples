@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  create-db:
+    cmds:
+      - docker build --progress=plain -t debefix-sample-sakila .
+
+  start-db:
+    cmds:
+      - docker run --rm  -p 5478:5432 -e POSTGRES_HOST_AUTH_METHOD=trust debefix-sample-sakila

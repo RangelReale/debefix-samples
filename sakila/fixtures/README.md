@@ -1,0 +1,1 @@
+Source: [github.com/jOOQ/sakila](https://raw.githubusercontent.com/jOOQ/sakila/main/postgres-sakila-db/postgres-sakila-insert-data.sql)
