@@ -1,20 +1,20 @@
 language:
   rows:
-    - language_id: 1
-      name: "English"
-      last_update: !!timestamp 2006-02-15T05:02:19Z
-    - language_id: 2
-      name: "Italian"
-      last_update: !!timestamp 2006-02-15T05:02:19Z
-    - language_id: 3
-      name: "Japanese"
-      last_update: !!timestamp 2006-02-15T05:02:19Z
-    - language_id: 4
-      name: "Mandarin"
-      last_update: !!timestamp 2006-02-15T05:02:19Z
-    - language_id: 5
-      name: "French"
-      last_update: !!timestamp 2006-02-15T05:02:19Z
-    - language_id: 6
-      name: "German"
-      last_update: !!timestamp 2006-02-15T05:02:19Z
+  - language_id: 1
+    last_update: !!timestamp 2006-02-15T05:02:19Z
+    name: "English             "
+  - language_id: 2
+    last_update: !!timestamp 2006-02-15T05:02:19Z
+    name: "Italian             "
+  - language_id: 3
+    last_update: !!timestamp 2006-02-15T05:02:19Z
+    name: "Japanese            "
+  - language_id: 4
+    last_update: !!timestamp 2006-02-15T05:02:19Z
+    name: "Mandarin            "
+  - language_id: 5
+    last_update: !!timestamp 2006-02-15T05:02:19Z
+    name: "French              "
+  - language_id: 6
+    last_update: !!timestamp 2006-02-15T05:02:19Z
+    name: "German              "

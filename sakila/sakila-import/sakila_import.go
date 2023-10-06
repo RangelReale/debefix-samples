@@ -31,10 +31,75 @@ func importData() error {
 		panic(err)
 	}
 
+	err = importTable(db, "language", filepath.Join(curDir, "..", "fixtures", "base", "language.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
 	err = importTable(db, "country", filepath.Join(curDir, "..", "fixtures", "base", "country.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
+
+	err = importTable(db, "city", filepath.Join(curDir, "..", "fixtures", "base", "city.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "address", filepath.Join(curDir, "..", "fixtures", "base", "address.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "actor", filepath.Join(curDir, "..", "fixtures", "base", "actor.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "staff", filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "store", filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "category", filepath.Join(curDir, "..", "fixtures", "base", "category.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "inventory", filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "film_actor", filepath.Join(curDir, "..", "fixtures", "base", "film_actor.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "film_category", filepath.Join(curDir, "..", "fixtures", "base", "film_category.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	err = importTable(db, "customer", filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
+	if err != nil {
+		panic(err)
+	}
+
+	// err = importTable(db, "rental", filepath.Join(curDir, "..", "fixtures", "base", "rental.dbf.yaml"))
+	// if err != nil {
+	// 	panic(err)
+	// }
+	//
+	// err = importTable(db, "payment", filepath.Join(curDir, "..", "fixtures", "base", "payment.dbf.yaml"))
+	// if err != nil {
+	// 	panic(err)
+	// }
 
 	return nil
 }

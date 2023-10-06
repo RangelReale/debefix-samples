@@ -1,0 +1,50 @@
+category:
+  rows:
+  - category_id: 1
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Action
+  - category_id: 2
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Animation
+  - category_id: 3
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Children
+  - category_id: 4
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Classics
+  - category_id: 5
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Comedy
+  - category_id: 6
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Documentary
+  - category_id: 7
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Drama
+  - category_id: 8
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Family
+  - category_id: 9
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Foreign
+  - category_id: 10
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Games
+  - category_id: 11
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Horror
+  - category_id: 12
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Music
+  - category_id: 13
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: New
+  - category_id: 14
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Sci-Fi
+  - category_id: 15
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Sports
+  - category_id: 16
+    last_update: !!timestamp 2006-02-15T04:46:27Z
+    name: Travel
