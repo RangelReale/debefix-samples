@@ -201,6 +201,22 @@ func importTableDataFilmCategory(db *sql.DB, filmID any, sdata []*specialData) (
 	})
 }
 
+func importTableDataFilmActor(db *sql.DB, filmID any, sdata []*specialData) (Data, error) {
+	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s" WHERE "film_id" = $1`, "film_actor"), filmID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	return importTableRows(db, rows, "film_actor", sdata, func(row Row) error {
+		row["film_id"] = TaggedString{
+			Tag:   "!dbfexpr",
+			Value: "parent:film_id",
+		}
+		return nil
+	})
+}
+
 func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*specialData, customize func(row Row) error) (Data, error) {
 	var currentSpecialData *specialData
 	for _, s := range sdata {
@@ -241,6 +257,12 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 				return nil, err
 			}
 			deps["film_category"] = filmCategoryData["film_category"]
+
+			filmActorData, err := importTableDataFilmActor(db, row["film_id"], sdata)
+			if err != nil {
+				return nil, err
+			}
+			deps["film_actor"] = filmActorData["film_actor"]
 		}
 
 		if len(deps) > 0 {
