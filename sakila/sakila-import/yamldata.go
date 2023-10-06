@@ -13,3 +13,8 @@ type TableConfig struct {
 }
 
 type Row map[string]any
+
+type RowConfig struct {
+	RefID string   `yaml:"refid,omitempty"`
+	Tags  []string `yaml:"tags,omitempty"`
+}

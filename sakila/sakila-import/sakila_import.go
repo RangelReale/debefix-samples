@@ -9,6 +9,7 @@ import (
 	"runtime"
 
 	"github.com/goccy/go-yaml"
+	"github.com/iancoleman/strcase"
 	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
@@ -19,6 +20,12 @@ func main() {
 	}
 }
 
+type specialData struct {
+	Tablename string
+	Fieldname string
+	RefID     map[any]string
+}
+
 func importData() error {
 	db, err := sql.Open("pgx",
 		fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5478", "sakila"))
@@ -26,77 +33,94 @@ func importData() error {
 		return err
 	}
 
+	sdLanguage, err := getSpecialData(db, "language", "language_id", "name")
+	if err != nil {
+		panic(err)
+	}
+
+	sdCategory, err := getSpecialData(db, "category", "category_id", "name")
+	if err != nil {
+		panic(err)
+	}
+
+	sdCountry, err := getSpecialData(db, "country", "country_id", "country")
+	if err != nil {
+		panic(err)
+	}
+
+	sdata := []*specialData{sdLanguage, sdCategory, sdCountry}
+
 	curDir, err := currentSourceDirectory()
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "language", filepath.Join(curDir, "..", "fixtures", "base", "language.dbf.yaml"))
+	err = importTable(db, "language", sdata, filepath.Join(curDir, "..", "fixtures", "base", "language.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "country", filepath.Join(curDir, "..", "fixtures", "base", "country.dbf.yaml"))
+	err = importTable(db, "country", sdata, filepath.Join(curDir, "..", "fixtures", "base", "country.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "city", filepath.Join(curDir, "..", "fixtures", "base", "city.dbf.yaml"))
+	err = importTable(db, "city", sdata, filepath.Join(curDir, "..", "fixtures", "base", "city.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "address", filepath.Join(curDir, "..", "fixtures", "base", "address.dbf.yaml"))
+	err = importTable(db, "address", sdata, filepath.Join(curDir, "..", "fixtures", "base", "address.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "actor", filepath.Join(curDir, "..", "fixtures", "base", "actor.dbf.yaml"))
+	err = importTable(db, "actor", sdata, filepath.Join(curDir, "..", "fixtures", "base", "actor.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "staff", filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
+	err = importTable(db, "staff", sdata, filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "store", filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
+	err = importTable(db, "store", sdata, filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "category", filepath.Join(curDir, "..", "fixtures", "base", "category.dbf.yaml"))
+	err = importTable(db, "category", sdata, filepath.Join(curDir, "..", "fixtures", "base", "category.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "inventory", filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
+	err = importTable(db, "inventory", sdata, filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "film_actor", filepath.Join(curDir, "..", "fixtures", "base", "film_actor.dbf.yaml"))
+	err = importTable(db, "film_actor", sdata, filepath.Join(curDir, "..", "fixtures", "base", "film_actor.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "film_category", filepath.Join(curDir, "..", "fixtures", "base", "film_category.dbf.yaml"))
+	err = importTable(db, "film_category", sdata, filepath.Join(curDir, "..", "fixtures", "base", "film_category.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	err = importTable(db, "customer", filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
+	err = importTable(db, "customer", sdata, filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
 	if err != nil {
 		panic(err)
 	}
 
-	// err = importTable(db, "rental", filepath.Join(curDir, "..", "fixtures", "base", "rental.dbf.yaml"))
+	// err = importTable(db, "rental", sdata, filepath.Join(curDir, "..", "fixtures", "base", "rental.dbf.yaml"))
 	// if err != nil {
 	// 	panic(err)
 	// }
 	//
-	// err = importTable(db, "payment", filepath.Join(curDir, "..", "fixtures", "base", "payment.dbf.yaml"))
+	// err = importTable(db, "payment", sdata, filepath.Join(curDir, "..", "fixtures", "base", "payment.dbf.yaml"))
 	// if err != nil {
 	// 	panic(err)
 	// }
@@ -104,12 +128,49 @@ func importData() error {
 	return nil
 }
 
-func importTable(db *sql.DB, tableName string, outputFilename string) error {
+func getSpecialData(db *sql.DB, tableName string, fieldName string, textFieldName string) (*specialData, error) {
+	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s"`, tableName))
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	sdata := &specialData{
+		Tablename: tableName,
+		Fieldname: fieldName,
+		RefID:     map[any]string{},
+	}
+
+	for rows.Next() {
+		row, err := rowToMap(rows)
+		if err != nil {
+			return nil, err
+		}
+
+		sdata.RefID[row[fieldName]] = strcase.ToSnake(row[textFieldName].(string))
+	}
+
+	if rows.Err() != nil {
+		return nil, rows.Err()
+	}
+
+	return sdata, nil
+}
+
+func importTable(db *sql.DB, tableName string, sdata []*specialData, outputFilename string) error {
 	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s"`, tableName))
 	if err != nil {
 		return err
 	}
 	defer rows.Close()
+
+	var currentSpecialData *specialData
+	for _, s := range sdata {
+		if s.Tablename == tableName {
+			currentSpecialData = s
+			break
+		}
+	}
 
 	table := &Table{}
 
@@ -118,6 +179,13 @@ func importTable(db *sql.DB, tableName string, outputFilename string) error {
 		if err != nil {
 			return err
 		}
+
+		if currentSpecialData != nil {
+			row["_dbfconfig"] = RowConfig{
+				RefID: currentSpecialData.RefID[row[currentSpecialData.Fieldname]],
+			}
+		}
+
 		table.Rows = append(table.Rows, row)
 	}
 

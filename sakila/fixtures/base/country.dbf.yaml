@@ -1,329 +1,547 @@
 country:
   rows:
-  - country: Afghanistan
+  - _dbfconfig:
+      refid: afghanistan
+    country: Afghanistan
     country_id: 1
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Algeria
+  - _dbfconfig:
+      refid: algeria
+    country: Algeria
     country_id: 2
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: American Samoa
+  - _dbfconfig:
+      refid: american_samoa
+    country: American Samoa
     country_id: 3
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Angola
+  - _dbfconfig:
+      refid: angola
+    country: Angola
     country_id: 4
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Anguilla
+  - _dbfconfig:
+      refid: anguilla
+    country: Anguilla
     country_id: 5
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Argentina
+  - _dbfconfig:
+      refid: argentina
+    country: Argentina
     country_id: 6
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Armenia
+  - _dbfconfig:
+      refid: armenia
+    country: Armenia
     country_id: 7
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Australia
+  - _dbfconfig:
+      refid: australia
+    country: Australia
     country_id: 8
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Austria
+  - _dbfconfig:
+      refid: austria
+    country: Austria
     country_id: 9
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Azerbaijan
+  - _dbfconfig:
+      refid: azerbaijan
+    country: Azerbaijan
     country_id: 10
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Bahrain
+  - _dbfconfig:
+      refid: bahrain
+    country: Bahrain
     country_id: 11
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Bangladesh
+  - _dbfconfig:
+      refid: bangladesh
+    country: Bangladesh
     country_id: 12
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Belarus
+  - _dbfconfig:
+      refid: belarus
+    country: Belarus
     country_id: 13
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Bolivia
+  - _dbfconfig:
+      refid: bolivia
+    country: Bolivia
     country_id: 14
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Brazil
+  - _dbfconfig:
+      refid: brazil
+    country: Brazil
     country_id: 15
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Brunei
+  - _dbfconfig:
+      refid: brunei
+    country: Brunei
     country_id: 16
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Bulgaria
+  - _dbfconfig:
+      refid: bulgaria
+    country: Bulgaria
     country_id: 17
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Cambodia
+  - _dbfconfig:
+      refid: cambodia
+    country: Cambodia
     country_id: 18
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Cameroon
+  - _dbfconfig:
+      refid: cameroon
+    country: Cameroon
     country_id: 19
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Canada
+  - _dbfconfig:
+      refid: canada
+    country: Canada
     country_id: 20
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Chad
+  - _dbfconfig:
+      refid: chad
+    country: Chad
     country_id: 21
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Chile
+  - _dbfconfig:
+      refid: chile
+    country: Chile
     country_id: 22
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: China
+  - _dbfconfig:
+      refid: china
+    country: China
     country_id: 23
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Colombia
+  - _dbfconfig:
+      refid: colombia
+    country: Colombia
     country_id: 24
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Congo, The Democratic Republic of the
+  - _dbfconfig:
+      refid: congo,_the_democratic_republic_of_the
+    country: Congo, The Democratic Republic of the
     country_id: 25
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Czech Republic
+  - _dbfconfig:
+      refid: czech_republic
+    country: Czech Republic
     country_id: 26
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Dominican Republic
+  - _dbfconfig:
+      refid: dominican_republic
+    country: Dominican Republic
     country_id: 27
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Ecuador
+  - _dbfconfig:
+      refid: ecuador
+    country: Ecuador
     country_id: 28
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Egypt
+  - _dbfconfig:
+      refid: egypt
+    country: Egypt
     country_id: 29
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Estonia
+  - _dbfconfig:
+      refid: estonia
+    country: Estonia
     country_id: 30
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Ethiopia
+  - _dbfconfig:
+      refid: ethiopia
+    country: Ethiopia
     country_id: 31
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Faroe Islands
+  - _dbfconfig:
+      refid: faroe_islands
+    country: Faroe Islands
     country_id: 32
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Finland
+  - _dbfconfig:
+      refid: finland
+    country: Finland
     country_id: 33
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: France
+  - _dbfconfig:
+      refid: france
+    country: France
     country_id: 34
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: French Guiana
+  - _dbfconfig:
+      refid: french_guiana
+    country: French Guiana
     country_id: 35
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: French Polynesia
+  - _dbfconfig:
+      refid: french_polynesia
+    country: French Polynesia
     country_id: 36
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Gambia
+  - _dbfconfig:
+      refid: gambia
+    country: Gambia
     country_id: 37
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Germany
+  - _dbfconfig:
+      refid: germany
+    country: Germany
     country_id: 38
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Greece
+  - _dbfconfig:
+      refid: greece
+    country: Greece
     country_id: 39
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Greenland
+  - _dbfconfig:
+      refid: greenland
+    country: Greenland
     country_id: 40
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Holy See (Vatican City State)
+  - _dbfconfig:
+      refid: holy_see_(vatican_city_state)
+    country: Holy See (Vatican City State)
     country_id: 41
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Hong Kong
+  - _dbfconfig:
+      refid: hong_kong
+    country: Hong Kong
     country_id: 42
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Hungary
+  - _dbfconfig:
+      refid: hungary
+    country: Hungary
     country_id: 43
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: India
+  - _dbfconfig:
+      refid: india
+    country: India
     country_id: 44
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Indonesia
+  - _dbfconfig:
+      refid: indonesia
+    country: Indonesia
     country_id: 45
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Iran
+  - _dbfconfig:
+      refid: iran
+    country: Iran
     country_id: 46
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Iraq
+  - _dbfconfig:
+      refid: iraq
+    country: Iraq
     country_id: 47
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Israel
+  - _dbfconfig:
+      refid: israel
+    country: Israel
     country_id: 48
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Italy
+  - _dbfconfig:
+      refid: italy
+    country: Italy
     country_id: 49
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Japan
+  - _dbfconfig:
+      refid: japan
+    country: Japan
     country_id: 50
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Kazakstan
+  - _dbfconfig:
+      refid: kazakstan
+    country: Kazakstan
     country_id: 51
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Kenya
+  - _dbfconfig:
+      refid: kenya
+    country: Kenya
     country_id: 52
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Kuwait
+  - _dbfconfig:
+      refid: kuwait
+    country: Kuwait
     country_id: 53
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Latvia
+  - _dbfconfig:
+      refid: latvia
+    country: Latvia
     country_id: 54
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Liechtenstein
+  - _dbfconfig:
+      refid: liechtenstein
+    country: Liechtenstein
     country_id: 55
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Lithuania
+  - _dbfconfig:
+      refid: lithuania
+    country: Lithuania
     country_id: 56
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Madagascar
+  - _dbfconfig:
+      refid: madagascar
+    country: Madagascar
     country_id: 57
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Malawi
+  - _dbfconfig:
+      refid: malawi
+    country: Malawi
     country_id: 58
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Malaysia
+  - _dbfconfig:
+      refid: malaysia
+    country: Malaysia
     country_id: 59
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Mexico
+  - _dbfconfig:
+      refid: mexico
+    country: Mexico
     country_id: 60
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Moldova
+  - _dbfconfig:
+      refid: moldova
+    country: Moldova
     country_id: 61
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Morocco
+  - _dbfconfig:
+      refid: morocco
+    country: Morocco
     country_id: 62
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Mozambique
+  - _dbfconfig:
+      refid: mozambique
+    country: Mozambique
     country_id: 63
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Myanmar
+  - _dbfconfig:
+      refid: myanmar
+    country: Myanmar
     country_id: 64
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Nauru
+  - _dbfconfig:
+      refid: nauru
+    country: Nauru
     country_id: 65
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Nepal
+  - _dbfconfig:
+      refid: nepal
+    country: Nepal
     country_id: 66
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Netherlands
+  - _dbfconfig:
+      refid: netherlands
+    country: Netherlands
     country_id: 67
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: New Zealand
+  - _dbfconfig:
+      refid: new_zealand
+    country: New Zealand
     country_id: 68
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Nigeria
+  - _dbfconfig:
+      refid: nigeria
+    country: Nigeria
     country_id: 69
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: North Korea
+  - _dbfconfig:
+      refid: north_korea
+    country: North Korea
     country_id: 70
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Oman
+  - _dbfconfig:
+      refid: oman
+    country: Oman
     country_id: 71
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Pakistan
+  - _dbfconfig:
+      refid: pakistan
+    country: Pakistan
     country_id: 72
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Paraguay
+  - _dbfconfig:
+      refid: paraguay
+    country: Paraguay
     country_id: 73
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Peru
+  - _dbfconfig:
+      refid: peru
+    country: Peru
     country_id: 74
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Philippines
+  - _dbfconfig:
+      refid: philippines
+    country: Philippines
     country_id: 75
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Poland
+  - _dbfconfig:
+      refid: poland
+    country: Poland
     country_id: 76
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Puerto Rico
+  - _dbfconfig:
+      refid: puerto_rico
+    country: Puerto Rico
     country_id: 77
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Romania
+  - _dbfconfig:
+      refid: romania
+    country: Romania
     country_id: 78
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Runion
+  - _dbfconfig:
+      refid: runion
+    country: Runion
     country_id: 79
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Russian Federation
+  - _dbfconfig:
+      refid: russian_federation
+    country: Russian Federation
     country_id: 80
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Saint Vincent and the Grenadines
+  - _dbfconfig:
+      refid: saint_vincent_and_the_grenadines
+    country: Saint Vincent and the Grenadines
     country_id: 81
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Saudi Arabia
+  - _dbfconfig:
+      refid: saudi_arabia
+    country: Saudi Arabia
     country_id: 82
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Senegal
+  - _dbfconfig:
+      refid: senegal
+    country: Senegal
     country_id: 83
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Slovakia
+  - _dbfconfig:
+      refid: slovakia
+    country: Slovakia
     country_id: 84
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: South Africa
+  - _dbfconfig:
+      refid: south_africa
+    country: South Africa
     country_id: 85
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: South Korea
+  - _dbfconfig:
+      refid: south_korea
+    country: South Korea
     country_id: 86
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Spain
+  - _dbfconfig:
+      refid: spain
+    country: Spain
     country_id: 87
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Sri Lanka
+  - _dbfconfig:
+      refid: sri_lanka
+    country: Sri Lanka
     country_id: 88
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Sudan
+  - _dbfconfig:
+      refid: sudan
+    country: Sudan
     country_id: 89
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Sweden
+  - _dbfconfig:
+      refid: sweden
+    country: Sweden
     country_id: 90
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Switzerland
+  - _dbfconfig:
+      refid: switzerland
+    country: Switzerland
     country_id: 91
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Taiwan
+  - _dbfconfig:
+      refid: taiwan
+    country: Taiwan
     country_id: 92
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Tanzania
+  - _dbfconfig:
+      refid: tanzania
+    country: Tanzania
     country_id: 93
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Thailand
+  - _dbfconfig:
+      refid: thailand
+    country: Thailand
     country_id: 94
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Tonga
+  - _dbfconfig:
+      refid: tonga
+    country: Tonga
     country_id: 95
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Tunisia
+  - _dbfconfig:
+      refid: tunisia
+    country: Tunisia
     country_id: 96
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Turkey
+  - _dbfconfig:
+      refid: turkey
+    country: Turkey
     country_id: 97
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Turkmenistan
+  - _dbfconfig:
+      refid: turkmenistan
+    country: Turkmenistan
     country_id: 98
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Tuvalu
+  - _dbfconfig:
+      refid: tuvalu
+    country: Tuvalu
     country_id: 99
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Ukraine
+  - _dbfconfig:
+      refid: ukraine
+    country: Ukraine
     country_id: 100
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: United Arab Emirates
+  - _dbfconfig:
+      refid: united_arab_emirates
+    country: United Arab Emirates
     country_id: 101
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: United Kingdom
+  - _dbfconfig:
+      refid: united_kingdom
+    country: United Kingdom
     country_id: 102
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: United States
+  - _dbfconfig:
+      refid: united_states
+    country: United States
     country_id: 103
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Venezuela
+  - _dbfconfig:
+      refid: venezuela
+    country: Venezuela
     country_id: 104
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Vietnam
+  - _dbfconfig:
+      refid: vietnam
+    country: Vietnam
     country_id: 105
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Virgin Islands, U.S.
+  - _dbfconfig:
+      refid: virgin_islands,_u_s_
+    country: Virgin Islands, U.S.
     country_id: 106
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Yemen
+  - _dbfconfig:
+      refid: yemen
+    country: Yemen
     country_id: 107
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Yugoslavia
+  - _dbfconfig:
+      refid: yugoslavia
+    country: Yugoslavia
     country_id: 108
     last_update: !!timestamp 2006-02-15T04:44:00Z
-  - country: Zambia
+  - _dbfconfig:
+      refid: zambia
+    country: Zambia
     country_id: 109
     last_update: !!timestamp 2006-02-15T04:44:00Z

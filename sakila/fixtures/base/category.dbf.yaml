@@ -1,50 +1,82 @@
 category:
   rows:
-  - category_id: 1
+  - _dbfconfig:
+      refid: action
+    category_id: 1
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Action
-  - category_id: 2
+  - _dbfconfig:
+      refid: animation
+    category_id: 2
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Animation
-  - category_id: 3
+  - _dbfconfig:
+      refid: children
+    category_id: 3
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Children
-  - category_id: 4
+  - _dbfconfig:
+      refid: classics
+    category_id: 4
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Classics
-  - category_id: 5
+  - _dbfconfig:
+      refid: comedy
+    category_id: 5
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Comedy
-  - category_id: 6
+  - _dbfconfig:
+      refid: documentary
+    category_id: 6
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Documentary
-  - category_id: 7
+  - _dbfconfig:
+      refid: drama
+    category_id: 7
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Drama
-  - category_id: 8
+  - _dbfconfig:
+      refid: family
+    category_id: 8
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Family
-  - category_id: 9
+  - _dbfconfig:
+      refid: foreign
+    category_id: 9
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Foreign
-  - category_id: 10
+  - _dbfconfig:
+      refid: games
+    category_id: 10
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Games
-  - category_id: 11
+  - _dbfconfig:
+      refid: horror
+    category_id: 11
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Horror
-  - category_id: 12
+  - _dbfconfig:
+      refid: music
+    category_id: 12
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Music
-  - category_id: 13
+  - _dbfconfig:
+      refid: new
+    category_id: 13
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: New
-  - category_id: 14
+  - _dbfconfig:
+      refid: sci_fi
+    category_id: 14
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Sci-Fi
-  - category_id: 15
+  - _dbfconfig:
+      refid: sports
+    category_id: 15
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Sports
-  - category_id: 16
+  - _dbfconfig:
+      refid: travel
+    category_id: 16
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Travel
