@@ -28,7 +28,7 @@ type specialData struct {
 
 func importData() error {
 	db, err := sql.Open("pgx",
-		fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5478", "sakila"))
+		fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5479", "sakila"))
 	if err != nil {
 		return err
 	}
