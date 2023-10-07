@@ -80,16 +80,6 @@ func importData() error {
 		panic(err)
 	}
 
-	err = importTable(db, "staff", []string{"address", "store"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
-	if err != nil {
-		panic(err)
-	}
-
-	err = importTable(db, "store", []string{"address"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
-	if err != nil {
-		panic(err)
-	}
-
 	err = importTable(db, "category", nil, sdata, filepath.Join(curDir, "..", "fixtures", "base", "category.dbf.yaml"))
 	if err != nil {
 		panic(err)
@@ -100,10 +90,22 @@ func importData() error {
 		panic(err)
 	}
 
-	err = importTable(db, "customer", []string{"store", "address"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
-	if err != nil {
-		panic(err)
-	}
+	// store and staff depends on each other, more complex logic would be needed to export in the correct order
+
+	// err = importTable(db, "customer", []string{"store", "address"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "customer.dbf.yaml"))
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// err = importTable(db, "staff", []string{"address", "store"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "staff.dbf.yaml"))
+	// if err != nil {
+	// 	panic(err)
+	// }
+
+	// err = importTable(db, "store", []string{"address", "staff"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "store.dbf.yaml"))
+	// if err != nil {
+	// 	panic(err)
+	// }
 
 	// err = importTable(db, "inventory", []string{"film", "store"}, sdata, filepath.Join(curDir, "..", "fixtures", "base", "inventory.dbf.yaml"))
 	// if err != nil {

@@ -1,12 +1,12 @@
 package main
 
 import (
+	"database/sql"
 	"errors"
+	"flag"
 	"fmt"
 	"path/filepath"
 	"runtime"
-	"slices"
-	"strings"
 
 	"github.com/RangelReale/debefix"
 	dbsql "github.com/RangelReale/debefix/db/sql"
@@ -14,7 +14,11 @@ import (
 	_ "github.com/jackc/pgx/v5/stdlib"
 )
 
+var useDB = flag.Bool("use-db", false, "use db")
+
 func main() {
+	flag.Parse()
+
 	err := importFixtures()
 	if err != nil {
 		panic(err)
@@ -22,18 +26,28 @@ func main() {
 }
 
 func importFixtures() error {
-	// db, err := sql.Open("pgx",
-	// 	fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5478", "sakila"))
-	// if err != nil {
-	// 	return err
-	// }
+	var db *sql.DB
+	var err error
+
+	if *useDB {
+		db, err = sql.Open("pgx",
+			fmt.Sprintf("postgres://postgres:password@%s:%s/%s?sslmode=disable", "localhost", "5478", "sakila"))
+		if err != nil {
+			return err
+		}
+	} else {
+		fmt.Println("not using DB, dumping only")
+	}
 
 	curDir, err := currentSourceDirectory()
 	if err != nil {
 		panic(err)
 	}
 
-	data, err := debefix.LoadDirectory(filepath.Join(curDir, "fixtures"))
+	data, err := debefix.Load(debefix.NewDirectoryFileProvider(filepath.Join(curDir, "fixtures")),
+		debefix.WithLoadProgress(func(filename string) {
+			fmt.Printf("Loading file %s...\n", filename)
+		}))
 	if err != nil {
 		panic(err)
 	}
@@ -43,26 +57,30 @@ func importFixtures() error {
 		panic(err)
 	}
 
-	// // wrap query interface, so we can print the output statements
-	// sqlQueryInterface := dbsql.NewSQLQueryInterface(db)
-	// wrapQueryInterface := dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
-	// 	return sqlQueryInterface.Query(query, returnFieldNames, args...)
-	// })
-	//
-	// will send an INSERT SQL for each row to the db, taking table dependency in account for the correct order.
-	// err = postgres.Resolve(wrapQueryInterface, data)
+	// wrap query interface, so we can print the output statements
+	var sqlQueryInterface dbsql.QueryInterface
+
+	if *useDB {
+		// will send an INSERT SQL for each row to the db, taking table dependency in account for the correct order.
+		sqlQueryInterface = dbsql.NewSQLQueryInterface(db)
+	}
 
 	insertCount := 0
 
 	debugQI := dbsql.DebugQueryInterface{}
 	err = postgres.Resolve(dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
 		insertCount++
+		if sqlQueryInterface != nil {
+			return sqlQueryInterface.Query(query, returnFieldNames, args...)
+		}
 		return debugQI.Query(query, returnFieldNames, args...)
 	}), data, debefix.WithResolveTagsFunc(func(tableID string, rowTags []string) bool {
-		if strings.HasPrefix(tableID, "film") {
-			return slices.Contains(rowTags, "rate_r")
-		}
+		// if strings.HasPrefix(tableID, "film") {
+		// 	return slices.Contains(rowTags, "rate_r")
+		// }
 		return true
+	}), debefix.WithResolveProgress(func(tableID, tableName string) {
+		fmt.Printf("Importing table %s...\n", tableName)
 	}))
 	if err != nil {
 		panic(err)

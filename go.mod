@@ -20,3 +20,4 @@ require (
 )
 
 replace github.com/goccy/go-yaml => /Users/rangelreale/prog/src/go-yaml
+replace github.com/RangelReale/debefix => ../debefix
