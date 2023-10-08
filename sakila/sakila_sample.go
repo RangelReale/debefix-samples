@@ -44,19 +44,6 @@ func importFixtures() error {
 		panic(err)
 	}
 
-	data, err := debefix.Load(debefix.NewDirectoryFileProvider(filepath.Join(curDir, "fixtures")),
-		debefix.WithLoadProgress(func(filename string) {
-			fmt.Printf("Loading file %s...\n", filename)
-		}))
-	if err != nil {
-		panic(err)
-	}
-
-	err = debefix.ResolveCheck(data)
-	if err != nil {
-		panic(err)
-	}
-
 	// wrap query interface, so we can print the output statements
 	var sqlQueryInterface dbsql.QueryInterface
 
@@ -68,20 +55,24 @@ func importFixtures() error {
 	insertCount := 0
 
 	debugQI := dbsql.DebugQueryInterface{}
-	err = postgres.Resolve(dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
-		insertCount++
-		if sqlQueryInterface != nil {
-			return sqlQueryInterface.Query(query, returnFieldNames, args...)
-		}
-		return debugQI.Query(query, returnFieldNames, args...)
-	}), data, debefix.WithResolveTagsFunc(func(tableID string, rowTags []string) bool {
-		// if strings.HasPrefix(tableID, "film") {
-		// 	return slices.Contains(rowTags, "rate_r")
-		// }
-		return true
-	}), debefix.WithResolveProgress(func(tableID, tableName string) {
-		fmt.Printf("Importing table %s...\n", tableName)
-	}))
+
+	err = postgres.GenerateDirectory(filepath.Join(curDir, "fixtures"),
+		dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
+			insertCount++
+			if sqlQueryInterface != nil {
+				return sqlQueryInterface.Query(query, returnFieldNames, args...)
+			}
+			return debugQI.Query(query, returnFieldNames, args...)
+		}),
+		debefix.WithGenerateLoadOptions(
+			debefix.WithLoadProgress(func(filename string) {
+				fmt.Printf("Loading file %s...\n", filename)
+			})),
+		debefix.WithGenerateResolveCheck(true),
+		debefix.WithGenerateResolveOptions(
+			debefix.WithResolveProgress(func(tableID, tableName string) {
+				fmt.Printf("Importing table %s...\n", tableName)
+			})))
 	if err != nil {
 		panic(err)
 	}
