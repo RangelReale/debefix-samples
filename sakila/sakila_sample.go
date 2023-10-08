@@ -64,15 +64,13 @@ func importFixtures() error {
 			}
 			return debugQI.Query(query, returnFieldNames, args...)
 		}),
-		debefix.WithLoadOptions(
-			debefix.WithLoadProgress(func(filename string) {
-				fmt.Printf("Loading file %s...\n", filename)
-			})),
+		debefix.WithLoadProgress(func(filename string) {
+			fmt.Printf("Loading file %s...\n", filename)
+		}),
 		debefix.WithGenerateResolveCheck(true),
-		debefix.WithResolveOptions(
-			debefix.WithResolveProgress(func(tableID, tableName string) {
-				fmt.Printf("Importing table %s...\n", tableName)
-			})))
+		debefix.WithResolveProgress(func(tableID, tableName string) {
+			fmt.Printf("Importing table %s...\n", tableName)
+		}))
 	if err != nil {
 		panic(err)
 	}
