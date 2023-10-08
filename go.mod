@@ -22,4 +22,4 @@ require (
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 )
 
-replace github.com/goccy/go-yaml => /Users/rangelreale/prog/src/go-yaml
+replace github.com/goccy/go-yaml => github.com/RangelReale/go-yaml custommarshal-tags
