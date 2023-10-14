@@ -1,6 +1,6 @@
 module github.com/RangelReale/debefix-samples
 
-go 1.21.1
+go 1.21
 
 require (
 	github.com/RangelReale/debefix v0.6.0
