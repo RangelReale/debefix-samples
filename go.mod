@@ -3,10 +3,10 @@ module github.com/rrgmc/debefix-samples
 go 1.21
 
 require (
-	github.com/rrgmc/debefix v0.8.0
 	github.com/goccy/go-yaml v1.11.2
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.4.3
+	github.com/rrgmc/debefix v0.8.0
 )
 
 require (
@@ -22,4 +22,4 @@ require (
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 )
 
-replace github.com/goccy/go-yaml => github.com/rrgmc/go-yaml v0.0.0-20231006154655-352ab5d3ac04
+replace github.com/goccy/go-yaml => github.com/RangelReale/go-yaml v0.0.0-20231006154655-352ab5d3ac04

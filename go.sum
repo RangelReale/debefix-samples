@@ -1,7 +1,5 @@
-github.com/rrgmc/debefix v0.6.0 h1:L6Lm8bX/Z3KQFWECD5bstR09q47cap8N0pNJnDL1f9I=
-github.com/rrgmc/debefix v0.6.0/go.mod h1:6szqztr5PO35i8NIZWyT+wiGKsoPv+yXYaXs+1E4sAo=
-github.com/rrgmc/go-yaml v0.0.0-20231006154655-352ab5d3ac04 h1:D6+APjtuhIsb0sloPBlCR2UV2+s09ralfG1U4438CcU=
-github.com/rrgmc/go-yaml v0.0.0-20231006154655-352ab5d3ac04/go.mod h1:wKnAMd44+9JAAnGQpWVEgBzGt3YuTaQ4uXoHvE4m7WU=
+github.com/RangelReale/go-yaml v0.0.0-20231006154655-352ab5d3ac04 h1:D6+APjtuhIsb0sloPBlCR2UV2+s09ralfG1U4438CcU=
+github.com/RangelReale/go-yaml v0.0.0-20231006154655-352ab5d3ac04/go.mod h1:wKnAMd44+9JAAnGQpWVEgBzGt3YuTaQ4uXoHvE4m7WU=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -34,6 +32,8 @@ github.com/mattn/go-isatty v0.0.19 h1:JITubQf0MOLdlGRuRq+jtsDlekdYPia9ZFsB8h/APP
 github.com/mattn/go-isatty v0.0.19/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/rrgmc/debefix v0.8.0 h1:ZxbZ7UyNpdppRuXKE3f1X4CEmh1eBse8T2FTsl0gHDU=
+github.com/rrgmc/debefix v0.8.0/go.mod h1:BWMd9A3hnOrd0pzfle/5JQc2F8XWLzHrAjQZI1SnfKo=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
