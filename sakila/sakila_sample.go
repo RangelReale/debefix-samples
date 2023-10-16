@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/RangelReale/debefix"
-	dbsql "github.com/RangelReale/debefix/db/sql"
-	"github.com/RangelReale/debefix/db/sql/postgres"
 	_ "github.com/jackc/pgx/v5/stdlib"
+	"github.com/rrgmc/debefix"
+	dbsql "github.com/rrgmc/debefix/db/sql"
+	"github.com/rrgmc/debefix/db/sql/postgres"
 )
 
 var useDB = flag.Bool("use-db", false, "use db")
