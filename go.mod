@@ -6,7 +6,7 @@ require (
 	github.com/goccy/go-yaml v1.11.2
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.4.3
-	github.com/rrgmc/debefix v0.8.0
+	github.com/rrgmc/debefix v0.9.0
 )
 
 require (
