@@ -56,7 +56,7 @@ func importFixtures() error {
 
 	debugQI := dbsql.DebugQueryInterface{}
 
-	err = postgres.GenerateDirectory(filepath.Join(curDir, "fixtures"),
+	_, err = postgres.GenerateDirectory(filepath.Join(curDir, "fixtures"),
 		dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
 			insertCount++
 			if sqlQueryInterface != nil {
