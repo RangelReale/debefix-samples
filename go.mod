@@ -3,15 +3,16 @@ module github.com/rrgmc/debefix-samples
 go 1.21
 
 require (
+	github.com/davecgh/go-spew v1.1.1
 	github.com/goccy/go-yaml v1.11.2
+	github.com/google/uuid v1.3.1
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.4.3
-	github.com/rrgmc/debefix v0.11.0
+	github.com/rrgmc/debefix v0.17.0
 )
 
 require (
 	github.com/fatih/color v1.15.0 // indirect
-	github.com/google/uuid v1.3.1 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
