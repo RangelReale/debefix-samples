@@ -286,11 +286,17 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 		}
 
 		if len(deps) > 0 {
-			row["_dbfdeps"] = deps
+			row["deps"] = &TaggedValue{
+				Tag:   "!dbfdeps",
+				Value: deps,
+			}
 		}
 
 		if rowConfig != nil {
-			row["_dbfconfig"] = *rowConfig
+			row["config"] = &TaggedValue{
+				Tag:   "!dbfconfig",
+				Value: *rowConfig,
+			}
 		}
 
 		if customize != nil {

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"database/sql"
 	"fmt"
 	"time"
@@ -19,6 +20,32 @@ func (t TaggedString) MarshalYAML() ([]byte, error) {
 		return nil, err
 	}
 	return []byte(fmt.Sprintf("%s %s", t.Tag, string(v))), nil
+}
+
+type TaggedValue struct {
+	Tag   string
+	Value any
+}
+
+func (t TaggedValue) MarshalYAML() ([]byte, error) {
+	var out bytes.Buffer
+	// _, _ = fmt.Fprintf(&out, "\n%s\n", t.Tag)
+	_, _ = fmt.Fprintf(&out, "%s\n", t.Tag)
+	v, err := yaml.ValueToNode(t.Value, yaml.Flow(false))
+	if err != nil {
+		return nil, err
+	}
+	_, _ = fmt.Fprintf(&out, "%s", v)
+	return out.Bytes(), nil
+
+	// node := ast.Tag(token.New("", "", &token.Position{}))
+	// node.Start.Value = t.Tag
+	// var err error
+	// node.Value, err = yaml.ValueToNode(t.Value, yaml.Flow(false))
+	// if err != nil {
+	// 	return nil, err
+	// }
+	// return []byte(node.String()), nil
 }
 
 func rowToMap(row *sql.Rows) (map[string]any, error) {

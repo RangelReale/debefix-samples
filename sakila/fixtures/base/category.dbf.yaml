@@ -1,82 +1,98 @@
 category:
   rows:
-  - _dbfconfig:
+  - category_id: 1
+    config:
+      !dbfconfig
       refid: action
-    category_id: 1
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Action
-  - _dbfconfig:
+  - category_id: 2
+    config:
+      !dbfconfig
       refid: animation
-    category_id: 2
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Animation
-  - _dbfconfig:
+  - category_id: 3
+    config:
+      !dbfconfig
       refid: children
-    category_id: 3
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Children
-  - _dbfconfig:
+  - category_id: 4
+    config:
+      !dbfconfig
       refid: classics
-    category_id: 4
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Classics
-  - _dbfconfig:
+  - category_id: 5
+    config:
+      !dbfconfig
       refid: comedy
-    category_id: 5
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Comedy
-  - _dbfconfig:
+  - category_id: 6
+    config:
+      !dbfconfig
       refid: documentary
-    category_id: 6
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Documentary
-  - _dbfconfig:
+  - category_id: 7
+    config:
+      !dbfconfig
       refid: drama
-    category_id: 7
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Drama
-  - _dbfconfig:
+  - category_id: 8
+    config:
+      !dbfconfig
       refid: family
-    category_id: 8
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Family
-  - _dbfconfig:
+  - category_id: 9
+    config:
+      !dbfconfig
       refid: foreign
-    category_id: 9
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Foreign
-  - _dbfconfig:
+  - category_id: 10
+    config:
+      !dbfconfig
       refid: games
-    category_id: 10
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Games
-  - _dbfconfig:
+  - category_id: 11
+    config:
+      !dbfconfig
       refid: horror
-    category_id: 11
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Horror
-  - _dbfconfig:
+  - category_id: 12
+    config:
+      !dbfconfig
       refid: music
-    category_id: 12
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Music
-  - _dbfconfig:
+  - category_id: 13
+    config:
+      !dbfconfig
       refid: new
-    category_id: 13
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: New
-  - _dbfconfig:
+  - category_id: 14
+    config:
+      !dbfconfig
       refid: sci_fi
-    category_id: 14
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Sci-Fi
-  - _dbfconfig:
+  - category_id: 15
+    config:
+      !dbfconfig
       refid: sports
-    category_id: 15
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Sports
-  - _dbfconfig:
+  - category_id: 16
+    config:
+      !dbfconfig
       refid: travel
-    category_id: 16
     last_update: !!timestamp 2006-02-15T04:46:27Z
     name: Travel
