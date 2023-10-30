@@ -8,12 +8,14 @@ posts:
       user_id: !dbfexpr "refid:users:johndoe:user_id"
       created_at: !!timestamp 2023-01-01T12:30:12Z
       updated_at: !!timestamp 2023-01-01T12:30:12Z
-      _dbfdeps:
+      deps:
+        !dbfdeps
         posts_tags:
           rows:
             - post_id: !dbfexpr "parent:post_id"
               tag_id: !dbfexpr "refid:tags:go:tag_id"
-      _dbfconfig:
+      config:
+        !dbfconfig
         refid: "post_1"
         tags: ["initial"]
     - post_id: 2
@@ -23,7 +25,8 @@ posts:
       user_id: !dbfexpr "refid:users:johndoe:user_id"
       created_at: !!timestamp 2023-01-02T12:30:12Z
       updated_at: !!timestamp 2023-01-02T12:30:12Z
-      _dbfdeps:
+      deps:
+        !dbfdeps
         posts_tags:
           rows:
             - post_id: !dbfexpr "parent:post_id"
