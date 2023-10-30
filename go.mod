@@ -23,4 +23,4 @@ require (
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 )
 
-replace github.com/goccy/go-yaml => github.com/RangelReale/go-yaml v0.0.0-20231006154655-352ab5d3ac04
+replace github.com/goccy/go-yaml => github.com/RangelReale/go-yaml v0.0.0-20231030155811-9523b5b26d8a
