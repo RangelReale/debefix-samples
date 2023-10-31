@@ -1,0 +1,22 @@
+users:
+  config:
+    table_name: "user"
+  rows:
+    - _id: 1
+      name: "John Doe"
+      email: "john@example.com"
+      created_at: !!timestamp 2023-01-01T12:30:12Z
+      updated_at: !!timestamp 2023-01-01T12:30:12Z
+      config:
+        !dbfconfig
+        refid: "johndoe"
+    - _id: 2
+      name: "Jane Doe"
+      email: "jane@example.com"
+      created_at: !!timestamp 2023-01-04T12:30:12Z
+      updated_at: !!timestamp 2023-01-04T12:30:12Z
+      config:
+        !dbfconfig
+        refid: "janedoe"
+        tags:
+          - onlyone

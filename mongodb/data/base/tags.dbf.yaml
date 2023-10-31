@@ -1,0 +1,25 @@
+tags:
+  config:
+    table_name: "tag"
+  rows:
+    - _id: !dbfexpr "generated"
+      name: "Go"
+      created_at: !!timestamp 2023-01-01T12:30:12Z
+      updated_at: !!timestamp 2023-01-01T12:30:12Z
+      config:
+        !dbfconfig
+        refid: "go"
+    - _id: !dbfexpr "generated"
+      name: "JavaScript"
+      created_at: !!timestamp 2023-01-01T12:30:12Z
+      updated_at: !!timestamp 2023-01-01T12:30:12Z
+      config:
+        !dbfconfig
+        refid: "javascript"
+    - _id: !dbfexpr "generated"
+      name: "C++"
+      created_at: !!timestamp 2023-01-01T12:30:12Z
+      updated_at: !!timestamp 2023-01-01T12:30:12Z
+      config:
+        !dbfconfig
+        refid: "cpp"
