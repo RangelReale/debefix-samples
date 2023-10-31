@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"path/filepath"
@@ -48,7 +49,7 @@ func main() {
 	// 	panic(err)
 	// }
 
-	err = resolveSQL(data, resolveTags)
+	err = resolveSQL(context.Background(), data, resolveTags)
 	if err != nil {
 		panic(err)
 	}
@@ -80,7 +81,7 @@ func resolvePrint(data *debefix.Data, resolveTags []string) error {
 	return err
 }
 
-func resolveSQL(data *debefix.Data, resolveTags []string) error {
-	_, err := postgres.Resolve(sql.NewDebugQueryInterface(nil), data, debefix.WithResolveTags(resolveTags))
+func resolveSQL(ctx context.Context, data *debefix.Data, resolveTags []string) error {
+	_, err := postgres.Resolve(ctx, sql.NewDebugQueryInterface(nil), data, debefix.WithResolveTags(resolveTags))
 	return err
 }

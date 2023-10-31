@@ -8,7 +8,7 @@ require (
 	github.com/google/uuid v1.3.1
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.4.3
-	github.com/rrgmc/debefix v0.18.0
+	github.com/rrgmc/debefix v0.19.0
 )
 
 require (

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"database/sql"
 	"errors"
 	"flag"
@@ -19,13 +20,15 @@ var useDB = flag.Bool("use-db", false, "use db")
 func main() {
 	flag.Parse()
 
-	err := importFixtures()
+	ctx := context.Background()
+
+	err := importFixtures(ctx)
 	if err != nil {
 		panic(err)
 	}
 }
 
-func importFixtures() error {
+func importFixtures(ctx context.Context) error {
 	var db *sql.DB
 	var err error
 
@@ -56,13 +59,13 @@ func importFixtures() error {
 
 	debugQI := dbsql.NewDebugQueryInterface(nil)
 
-	_, err = postgres.GenerateDirectory(filepath.Join(curDir, "fixtures"),
-		dbsql.QueryInterfaceFunc(func(query string, returnFieldNames []string, args ...any) (map[string]any, error) {
+	_, err = postgres.GenerateDirectory(ctx, filepath.Join(curDir, "fixtures"),
+		dbsql.QueryInterfaceFunc(func(ctx context.Context, query string, returnFieldNames []string, args ...any) (map[string]any, error) {
 			insertCount++
 			if sqlQueryInterface != nil {
-				return sqlQueryInterface.Query(query, returnFieldNames, args...)
+				return sqlQueryInterface.Query(ctx, query, returnFieldNames, args...)
 			}
-			return debugQI.Query(query, returnFieldNames, args...)
+			return debugQI.Query(ctx, query, returnFieldNames, args...)
 		}),
 		debefix.WithLoadProgress(func(filename string) {
 			fmt.Printf("Loading file %s...\n", filename)
