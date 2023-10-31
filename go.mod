@@ -9,7 +9,7 @@ require (
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.4.3
 	github.com/rrgmc/debefix v0.19.0
-	github.com/rrgmc/debefix-mongodb v0.19.2
+	github.com/rrgmc/debefix-mongodb v0.19.3
 	go.mongodb.org/mongo-driver v1.12.1
 )
 
