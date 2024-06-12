@@ -29,12 +29,7 @@ func main() {
 
 	ctx := context.Background()
 
-	fmt.Println("connecting to mongodb...")
-	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27097"))
-	if err != nil {
-		panic(err)
-	}
-
+	fmt.Println("loading data...")
 	data, err := debefix.Load(debefix.NewDirectoryFileProvider(filepath.Join(curDir, "data"),
 		debefix.WithDirectoryAsTag()))
 	if err != nil {
@@ -42,6 +37,12 @@ func main() {
 	}
 
 	// spew.Dump(data)
+
+	fmt.Println("connecting to mongodb...")
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27097"))
+	if err != nil {
+		panic(err)
+	}
 
 	resolveTags := []string{}
 
