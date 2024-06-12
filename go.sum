@@ -39,8 +39,8 @@ github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe h1:iruDEfMl2E6f
 github.com/montanaflynn/stats v0.0.0-20171201202039-1bf9dbcd8cbe/go.mod h1:wL8QJuTMNUDYhXwkmfOly8iTdp5TEcJFWZD2D7SIkUc=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/rrgmc/debefix v1.1.2 h1:EZpAW9qmrun31lTYWsNK8Xop6P9UHIq2jnHlI94B8Vo=
-github.com/rrgmc/debefix v1.1.2/go.mod h1:bKs5uInFR7cj7mWlLh4iUB0WLZ0KQ7Ry1ge9inuRZ/s=
+github.com/rrgmc/debefix v1.1.3 h1:HU/PjL+7IMSmLMUHINZ8fz1BEzVWX2vBH8udmDhjxms=
+github.com/rrgmc/debefix v1.1.3/go.mod h1:bKs5uInFR7cj7mWlLh4iUB0WLZ0KQ7Ry1ge9inuRZ/s=
 github.com/rrgmc/debefix-mongodb v1.1.0 h1:r1vlKIDQ9y8N14APaEL0Wujfr2+L6mGP0jDaO6aC8RM=
 github.com/rrgmc/debefix-mongodb v1.1.0/go.mod h1:NLBdTTA/6kXXUQA21gIz8OKLHH0Rgb6UaiFOPzkqT24=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
