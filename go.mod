@@ -1,6 +1,8 @@
 module github.com/rrgmc/debefix-samples
 
-go 1.21.1
+go 1.22
+
+toolchain go1.22.3
 
 require (
 	github.com/davecgh/go-spew v1.1.1
@@ -8,7 +10,7 @@ require (
 	github.com/google/uuid v1.3.1
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.4.3
-	github.com/rrgmc/debefix v1.1.0
+	github.com/rrgmc/debefix v1.1.2
 	github.com/rrgmc/debefix-mongodb v1.1.0
 	go.mongodb.org/mongo-driver v1.12.1
 )
