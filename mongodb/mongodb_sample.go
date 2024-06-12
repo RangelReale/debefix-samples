@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"errors"
+	"fmt"
 	"path/filepath"
 	"runtime"
 
@@ -28,6 +29,7 @@ func main() {
 
 	ctx := context.Background()
 
+	fmt.Println("connecting to mongodb...")
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI("mongodb://localhost:27097"))
 	if err != nil {
 		panic(err)

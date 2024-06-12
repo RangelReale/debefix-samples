@@ -1,6 +1,8 @@
 package main
 
-type Data map[string]*Table
+type Data struct {
+	Tables map[string]*Table `yaml:"tables"`
+}
 
 type Table struct {
 	Config TableConfig `yaml:"config,omitempty"`

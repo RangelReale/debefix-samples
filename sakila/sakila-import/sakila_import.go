@@ -160,7 +160,7 @@ func importTable(db *sql.DB, tableName string, deps []string, sdata []*specialDa
 		return err
 	}
 
-	data[tableName].Config.Depends = deps
+	data.Tables[tableName].Config.Depends = deps
 
 	f, err := os.Create(outputFilename)
 	if err != nil {
@@ -177,7 +177,7 @@ func importTable(db *sql.DB, tableName string, deps []string, sdata []*specialDa
 	return nil
 }
 
-func importTableData(db *sql.DB, tableName string, sdata []*specialData) (Data, error) {
+func importTableData(db *sql.DB, tableName string, sdata []*specialData) (*Data, error) {
 	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s"`, tableName))
 	if err != nil {
 		return nil, err
@@ -187,7 +187,7 @@ func importTableData(db *sql.DB, tableName string, sdata []*specialData) (Data, 
 	return importTableRows(db, rows, tableName, sdata, nil, nil)
 }
 
-func importTableDataFilmCategory(db *sql.DB, filmID any, sdata []*specialData, rowTags []string) (Data, error) {
+func importTableDataFilmCategory(db *sql.DB, filmID any, sdata []*specialData, rowTags []string) (*Data, error) {
 	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s" WHERE "film_id" = $1`, "film_category"), filmID)
 	if err != nil {
 		return nil, err
@@ -203,7 +203,7 @@ func importTableDataFilmCategory(db *sql.DB, filmID any, sdata []*specialData, r
 	})
 }
 
-func importTableDataFilmActor(db *sql.DB, filmID any, sdata []*specialData, rowTags []string) (Data, error) {
+func importTableDataFilmActor(db *sql.DB, filmID any, sdata []*specialData, rowTags []string) (*Data, error) {
 	rows, err := db.Query(fmt.Sprintf(`SELECT * FROM "%s" WHERE "film_id" = $1`, "film_actor"), filmID)
 	if err != nil {
 		return nil, err
@@ -220,7 +220,7 @@ func importTableDataFilmActor(db *sql.DB, filmID any, sdata []*specialData, rowT
 }
 
 func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*specialData,
-	rowTags []string, customize func(row Row) error) (Data, error) {
+	rowTags []string, customize func(row Row) error) (*Data, error) {
 	var currentSpecialData *specialData
 	for _, s := range sdata {
 		if s.Tablename == tableName {
@@ -260,7 +260,9 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 			}
 		}
 
-		deps := Data{}
+		deps := Data{
+			Tables: map[string]*Table{},
+		}
 
 		if tableName == "film" {
 			filmRowTags := []string{"rate_" + strcase.ToSnake(row["rating"].(string))}
@@ -269,13 +271,13 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 			if err != nil {
 				return nil, err
 			}
-			deps["film_category"] = filmCategoryData["film_category"]
+			deps.Tables["film_category"] = filmCategoryData.Tables["film_category"]
 
 			filmActorData, err := importTableDataFilmActor(db, row["film_id"], sdata, filmRowTags)
 			if err != nil {
 				return nil, err
 			}
-			deps["film_actor"] = filmActorData["film_actor"]
+			deps.Tables["film_actor"] = filmActorData.Tables["film_actor"]
 
 			// add tags for rating
 			if rowConfig == nil {
@@ -285,7 +287,7 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 			rowConfig.Tags = append(rowConfig.Tags, filmRowTags...)
 		}
 
-		if len(deps) > 0 {
+		if len(deps.Tables) > 0 {
 			row["deps"] = &TaggedValue{
 				Tag:   "!dbfdeps",
 				Value: deps,
@@ -313,8 +315,10 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 		return nil, rows.Err()
 	}
 
-	return Data{
-		tableName: table,
+	return &Data{
+		Tables: map[string]*Table{
+			tableName: table,
+		},
 	}, nil
 }
 
