@@ -1,0 +1,27 @@
+tables:
+  language:
+    rows:
+    - _refid: !refid english
+      language_id: 1
+      last_update: !!timestamp 2006-02-15T05:02:19Z
+      name: "English             "
+    - _refid: !refid italian
+      language_id: 2
+      last_update: !!timestamp 2006-02-15T05:02:19Z
+      name: "Italian             "
+    - _refid: !refid japanese
+      language_id: 3
+      last_update: !!timestamp 2006-02-15T05:02:19Z
+      name: "Japanese            "
+    - _refid: !refid mandarin
+      language_id: 4
+      last_update: !!timestamp 2006-02-15T05:02:19Z
+      name: "Mandarin            "
+    - _refid: !refid french
+      language_id: 5
+      last_update: !!timestamp 2006-02-15T05:02:19Z
+      name: "French              "
+    - _refid: !refid german
+      language_id: 6
+      last_update: !!timestamp 2006-02-15T05:02:19Z
+      name: "German              "
