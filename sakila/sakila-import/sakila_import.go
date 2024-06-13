@@ -290,7 +290,7 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 		if len(deps.Tables) > 0 {
 			row["deps"] = &TaggedValue{
 				Tag:   "!deps",
-				Value: deps,
+				Value: deps.Tables,
 			}
 		}
 
