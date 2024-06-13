@@ -4,23 +4,17 @@ tables:
       table_name: "tag"
     rows:
       - tag_id: !dbfexpr "generated"
+        _refid: !dbfrefid "go"
         name: "Go"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
-        config:
-          !dbfconfig
-          refid: "go"
       - tag_id: !dbfexpr "generated"
+        _refid: !dbfrefid "javascript"
         name: "JavaScript"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
-        config:
-          !dbfconfig
-          refid: "javascript"
       - tag_id: !dbfexpr "generated"
+        _refid: !dbfrefid "cpp"
         name: "C++"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
-        config:
-          !dbfconfig
-          refid: "cpp"
