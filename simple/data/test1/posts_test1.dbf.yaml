@@ -4,12 +4,12 @@ tables:
       - post_id: 5
         title: "Post 5"
         text: "This is the text of the fifth post"
-        user_id: !dbfexpr "refid:users:janedoe:user_id"
+        user_id: !expr "refid:users:janedoe:user_id"
         created_at: !!timestamp 2023-01-05T12:30:12Z
         updated_at: !!timestamp 2023-01-05T12:30:12Z
         config:
-          !dbfdeps
+          !deps
           posts_tags:
             rows:
-              - post_id: !dbfexpr "parent:post_id"
-                tag_id: !dbfexpr "refid:tags:javascript:tag_id"
+              - post_id: !expr "parent:post_id"
+                tag_id: !expr "refid:tags:javascript:tag_id"

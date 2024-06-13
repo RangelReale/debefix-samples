@@ -6,13 +6,13 @@ tables:
     rows:
       - comment_id: 1
         post_id: 1
-        user_id: !dbfexpr "refid:users:janedoe:_id"
+        user_id: !expr "refid:users:janedoe:_id"
         text: "Good post!"
         created_at: !!timestamp 2023-01-01T12:31:12Z
         updated_at: !!timestamp 2023-01-01T12:31:12Z
       - comment_id: 2
         post_id: 1
-        user_id: !dbfexpr "refid:users:johndoe:_id"
+        user_id: !expr "refid:users:johndoe:_id"
         text: "Thanks!"
         created_at: !!timestamp 2023-01-01T12:35:12Z
         updated_at: !!timestamp 2023-01-01T12:35:12Z

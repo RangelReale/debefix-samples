@@ -196,7 +196,7 @@ func importTableDataFilmCategory(db *sql.DB, filmID any, sdata []*specialData, r
 
 	return importTableRows(db, rows, "film_category", sdata, rowTags, func(row Row) error {
 		row["film_id"] = TaggedString{
-			Tag:   "!dbfexpr",
+			Tag:   "!expr",
 			Value: "parent:film_id",
 		}
 		return nil
@@ -212,7 +212,7 @@ func importTableDataFilmActor(db *sql.DB, filmID any, sdata []*specialData, rowT
 
 	return importTableRows(db, rows, "film_actor", sdata, rowTags, func(row Row) error {
 		row["film_id"] = TaggedString{
-			Tag:   "!dbfexpr",
+			Tag:   "!expr",
 			Value: "parent:film_id",
 		}
 		return nil
@@ -253,7 +253,7 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 			for _, s := range sdata {
 				if sfd, ok := row[s.Fieldname]; ok {
 					row[s.Fieldname] = TaggedString{
-						Tag:   "!dbfexpr",
+						Tag:   "!expr",
 						Value: fmt.Sprintf("refid:%s:%s:%s", s.Tablename, s.RefID[sfd], s.Fieldname),
 					}
 				}
@@ -289,15 +289,23 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 
 		if len(deps.Tables) > 0 {
 			row["deps"] = &TaggedValue{
-				Tag:   "!dbfdeps",
+				Tag:   "!deps",
 				Value: deps,
 			}
 		}
 
 		if rowConfig != nil {
-			row["config"] = &TaggedValue{
-				Tag:   "!dbfconfig",
-				Value: *rowConfig,
+			if rowConfig.RefID != "" {
+				row["_refid"] = &TaggedValue{
+					Tag:   "!refid",
+					Value: rowConfig.RefID,
+				}
+			}
+			if len(rowConfig.Tags) > 0 {
+				row["_tags"] = &TaggedValue{
+					Tag:   "!tags",
+					Value: rowConfig.Tags,
+				}
 			}
 		}
 

@@ -4,14 +4,14 @@ tables:
       table_name: "user"
     rows:
       - user_id: 1
-        _refid: !dbfrefid "johndoe"
+        _refid: !refid "johndoe"
         name: "John Doe"
         email: "john@example.com"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
       - user_id: 2
-        _refid: !dbfrefid "janedoe"
-        _tags: !dbftags ["onlyone"]
+        _refid: !refid "janedoe"
+        _tags: !tags ["onlyone"]
         name: "Jane Doe"
         email: "jane@example.com"
         created_at: !!timestamp 2023-01-04T12:30:12Z

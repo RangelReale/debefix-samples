@@ -3,18 +3,18 @@ tables:
     config:
       table_name: "tag"
     rows:
-      - tag_id: !dbfexpr "generated"
-        _refid: !dbfrefid "go"
+      - tag_id: !expr "generated"
+        _refid: !refid "go"
         name: "Go"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
-      - tag_id: !dbfexpr "generated"
-        _refid: !dbfrefid "javascript"
+      - tag_id: !expr "generated"
+        _refid: !refid "javascript"
         name: "JavaScript"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
-      - tag_id: !dbfexpr "generated"
-        _refid: !dbfrefid "cpp"
+      - tag_id: !expr "generated"
+        _refid: !refid "cpp"
         name: "C++"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z

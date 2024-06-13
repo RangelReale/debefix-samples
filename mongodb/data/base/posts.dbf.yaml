@@ -4,37 +4,35 @@ tables:
       table_name: "post"
     rows:
       - _id: 1
+        refid: !refid "post_1"
+        _tags: !tags ["initial"]
         title: "Post 1"
         text: "This is the text of the first post"
-        user_id: !dbfexpr "refid:users:johndoe:_id"
+        user_id: !expr "refid:users:johndoe:_id"
         created_at: !!timestamp 2023-01-01T12:30:12Z
         updated_at: !!timestamp 2023-01-01T12:30:12Z
         deps:
-          !dbfdeps
+          !deps
           posts_tags:
             rows:
-              - post_id: !dbfexpr "parent:_id"
-                tag_id: !dbfexpr "refid:tags:go:_id"
-        config:
-          !dbfconfig
-          refid: "post_1"
-          tags: ["initial"]
+              - post_id: !expr "parent:_id"
+                tag_id: !expr "refid:tags:go:_id"
       - _id: 2
-        parent_post_id: !dbfexpr "refid:posts:post_1:_id"
+        parent_post_id: !expr "refid:posts:post_1:_id"
         title: "Post 2"
         text: "This is the text of the seco d post"
-        user_id: !dbfexpr "refid:users:johndoe:_id"
+        user_id: !expr "refid:users:johndoe:_id"
         created_at: !!timestamp 2023-01-02T12:30:12Z
         updated_at: !!timestamp 2023-01-02T12:30:12Z
         deps:
-          !dbfdeps
+          !deps
           posts_tags:
             rows:
-              - post_id: !dbfexpr "parent:_id"
-                tag_id: !dbfexpr "refid:tags:javascript:_id"
+              - post_id: !expr "parent:_id"
+                tag_id: !expr "refid:tags:javascript:_id"
           comments:
             rows:
               - comment_id: 3
-                post_id: !dbfexpr "parent:_id"
-                user_id: !dbfexpr "refid:users:janedoe:_id"
+                post_id: !expr "parent:_id"
+                user_id: !expr "refid:users:janedoe:_id"
                 text: "I liked this post!"
