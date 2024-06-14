@@ -43,9 +43,9 @@ func run() error {
 
 	resolvedData, err := debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
 		return nil
-	}, debefix.WithRowResolvedCallback(func(ctx debefix.ValueResolveContext) {
+	}, debefix.WithRowResolvedCallback(debefix.RowResolvedCallbackFunc(func(ctx debefix.ValueResolveContext) {
 		spew.Dump(ctx.Row().Metadata)
-	}))
+	})))
 	if err != nil {
 		return err
 	}
