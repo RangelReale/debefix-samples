@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"testing/fstest"
 
 	"github.com/rrgmc/debefix"
@@ -41,13 +40,12 @@ func run() error {
 		return err
 	}
 
-	resolvedData, err := debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
+	_, err = debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
 		return nil
 	}, debefix.WithRowResolvedCallback(copyFilePlugin))
 	if err != nil {
 		return err
 	}
 
-	fmt.Println(resolvedData.Tables["tags"].Rows[0].Fields["_file"])
 	return nil
 }

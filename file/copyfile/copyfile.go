@@ -1,7 +1,8 @@
 package copyfile
 
 import (
-	"github.com/davecgh/go-spew/spew"
+	"fmt"
+
 	"github.com/goccy/go-yaml"
 	"github.com/goccy/go-yaml/ast"
 	"github.com/rrgmc/debefix"
@@ -27,11 +28,16 @@ func (c *CopyFile) ParseValue(tag *ast.TagNode) (bool, any, error) {
 		return false, nil, err
 	}
 
-	return true, &copyFileValue{}, nil
+	return true, &copyFileValue{fileData: fileData}, nil
 }
 
 func (c *CopyFile) RowResolved(ctx debefix.ValueResolveContext) {
-	spew.Dump(ctx.Row().Metadata)
+	md := getMetadata(ctx.Row().Metadata)
+	for fieldName, file := range md.Fields {
+		fmt.Printf("$$ [%s] COPY FILE FROM '%s' to '%s'\n", fieldName, file.Src, file.Dest)
+	}
+
+	// spew.Dump(ctx.Row().Metadata)
 }
 
 type copyFileValue struct {
@@ -53,8 +59,8 @@ const (
 	metadataName = "__copyfile__"
 )
 
-func getMetadata(ctx debefix.ValueCallbackResolveContext) *FileDataList {
-	if md, ok := ctx.Metadata()[metadataName]; ok {
+func getMetadata(metadata map[string]any) *FileDataList {
+	if md, ok := metadata[metadataName]; ok {
 		if mdfl, ok := md.(*FileDataList); ok {
 			return mdfl
 		}
@@ -65,7 +71,7 @@ func getMetadata(ctx debefix.ValueCallbackResolveContext) *FileDataList {
 }
 
 func setMetadata(ctx debefix.ValueCallbackResolveContext, fileData FileData) {
-	md := getMetadata(ctx)
-	md.Fields[metadataName] = fileData
+	md := getMetadata(ctx.Metadata())
+	md.Fields[ctx.FieldName()] = fileData
 	ctx.SetMetadata(metadataName, md)
 }
