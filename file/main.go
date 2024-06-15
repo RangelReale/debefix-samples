@@ -33,16 +33,16 @@ func run() error {
 		},
 	})
 
-	copyFilePlugin := &copyfile.CopyFile{}
+	_, loadOptions, resolveOptions := copyfile.NewOptions()
 
-	data, err := debefix.Load(provider, debefix.WithLoadValueParser(copyFilePlugin))
+	data, err := debefix.Load(provider, loadOptions...)
 	if err != nil {
 		return err
 	}
 
 	_, err = debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
 		return nil
-	}, debefix.WithRowResolvedCallback(copyFilePlugin))
+	}, resolveOptions...)
 	if err != nil {
 		return err
 	}
