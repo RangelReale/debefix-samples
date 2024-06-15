@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing/fstest"
 
 	"github.com/rrgmc/debefix"
@@ -33,7 +34,12 @@ func run() error {
 		},
 	})
 
-	_, loadOptions, resolveOptions := copyfile.NewOptions()
+	_, loadOptions, resolveOptions := copyfile.NewOptions(
+		copyfile.WithCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) error {
+			fmt.Printf("$$ [%s] COPY FILE FROM '%s' to '%s'\n", fieldname, fileData.Src, fileData.Dest)
+			return nil
+		}),
+	)
 
 	data, err := debefix.Load(provider, loadOptions...)
 	if err != nil {

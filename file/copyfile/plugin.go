@@ -1,16 +1,14 @@
 package copyfile
 
 import (
-	"fmt"
-
 	"github.com/goccy/go-yaml"
 	"github.com/goccy/go-yaml/ast"
 	"github.com/rrgmc/debefix"
 )
 
-
 type CopyFile struct {
 	debefix.ValueImpl
+	callback Callback
 }
 
 var (
@@ -32,11 +30,17 @@ func (c *CopyFile) ParseValue(tag *ast.TagNode) (bool, any, error) {
 	return true, &copyFileValue{fileData: fileData}, nil
 }
 
-func (c *CopyFile) RowResolved(ctx debefix.ValueResolveContext) {
+func (c *CopyFile) RowResolved(ctx debefix.ValueResolveContext) error {
 	md := getMetadata(ctx.Row().Metadata)
-	for fieldName, file := range md.Fields {
-		fmt.Printf("$$ [%s] COPY FILE FROM '%s' to '%s'\n", fieldName, file.Src, file.Dest)
+	for fieldname, file := range md.Fields {
+		if c.callback != nil {
+			err := c.callback(ctx, fieldname, file)
+			if err != nil {
+				return err
+			}
+		}
 	}
+	return nil
 }
 
 type copyFileValue struct {
