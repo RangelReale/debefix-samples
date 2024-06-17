@@ -1,6 +1,8 @@
 package copyfile
 
 import (
+	"errors"
+
 	"github.com/goccy/go-yaml"
 	"github.com/goccy/go-yaml/ast"
 	"github.com/rrgmc/debefix"
@@ -8,7 +10,8 @@ import (
 
 type CopyFile struct {
 	debefix.ValueImpl
-	callback Callback
+	callback         Callback
+	setValueCallback SetValueCallback
 }
 
 var (
@@ -17,6 +20,7 @@ var (
 )
 
 func (c *CopyFile) ParseValue(tag *ast.TagNode) (bool, any, error) {
+	// parse "!copyfile" tag
 	if tag.Start.Value != "!copyfile" {
 		return false, nil, nil
 	}
@@ -27,10 +31,12 @@ func (c *CopyFile) ParseValue(tag *ast.TagNode) (bool, any, error) {
 		return false, nil, err
 	}
 
-	return true, &copyFileValue{fileData: fileData}, nil
+	// return a [debefix.Value] to be processed later.
+	return true, &copyFileValue{cf: c, fileData: fileData}, nil
 }
 
 func (c *CopyFile) RowResolved(ctx debefix.ValueResolveContext) error {
+	// after row was resolved, call the callback to copy the file
 	md := getMetadata(ctx.Row().Metadata)
 	for fieldname, file := range md.Fields {
 		if c.callback != nil {
@@ -45,6 +51,7 @@ func (c *CopyFile) RowResolved(ctx debefix.ValueResolveContext) error {
 
 type copyFileValue struct {
 	debefix.ValueImpl
+	cf       *CopyFile
 	fileData FileData
 }
 
@@ -53,9 +60,16 @@ var (
 )
 
 func (c *copyFileValue) GetValueCallback(ctx debefix.ValueCallbackResolveContext) (resolvedValue any, addField bool, err error) {
+	// copy the metadata to the row being processed, so it is available to [CopyFile.RowResolved].
 	setMetadata(ctx, c.fileData)
-	// don't add a data field
-	return nil, false, nil
+	if !c.fileData.SetValue {
+		// don't add a data field
+		return nil, false, nil
+	}
+	if c.cf.setValueCallback == nil {
+		return nil, false, errors.New("setValueCallback not set")
+	}
+	return c.cf.setValueCallback(ctx, c.fileData)
 }
 
 const (

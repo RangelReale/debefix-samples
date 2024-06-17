@@ -2,7 +2,13 @@ package copyfile
 
 import (
 	"bytes"
+	"cmp"
+	"fmt"
 	"io"
+	"slices"
+	"strings"
+
+	"golang.org/x/exp/maps"
 )
 
 type ParsedString struct {
@@ -15,6 +21,11 @@ const (
 	closeBrace = '}'
 )
 
+func Replace(str string, values map[string]any) (string, error) {
+	p := Parse(str)
+	return p.Replace(values)
+}
+
 func Parse(str string) *ParsedString {
 	ret := &ParsedString{
 		str:    str,
@@ -22,6 +33,32 @@ func Parse(str string) *ParsedString {
 	}
 	ret.parse()
 	return ret
+}
+
+func (s *ParsedString) Replace(values map[string]any) (string, error) {
+	fields := maps.Values(s.fields)
+	slices.SortFunc(fields, func(a, b parsedStringField) int {
+		return cmp.Compare(a.start, b.start)
+	})
+
+	var sb strings.Builder
+	curstart := 0
+	for _, field := range fields {
+		if curstart < field.start {
+			sb.WriteString(s.str[curstart:field.start])
+		}
+		fv, ok := values[field.name]
+		if !ok {
+			return "", fmt.Errorf("field '%s' not set", field.name)
+		}
+		sb.WriteString(fmt.Sprint(fv))
+		curstart = field.end
+	}
+	if curstart < len(s.str) {
+		sb.WriteString(s.str[curstart:])
+	}
+
+	return sb.String(), nil
 }
 
 func (s *ParsedString) parse() {

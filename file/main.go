@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"testing/fstest"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/rrgmc/debefix"
 	"github.com/rrgmc/debefix-samples/file/copyfile"
 )
@@ -26,8 +27,10 @@ func run() error {
         _metadata:
           !metadata
           filedata: "best"
-        _tagimage:
+        tagfilename:
           !copyfile
+          id: tag_image
+          setValue: true
           src: "images/tags/javascript.png"
           dest: "company/{companyID}/images/tags/{tagID}.png"
 `),
@@ -36,8 +39,23 @@ func run() error {
 
 	_, loadOptions, resolveOptions := copyfile.NewOptions(
 		copyfile.WithCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) error {
-			fmt.Printf("$$ [%s] COPY FILE FROM '%s' to '%s'\n", fieldname, fileData.Src, fileData.Dest)
+			dest, err := copyfile.Replace(fileData.Dest, map[string]any{
+				"companyID": "6666",
+				"tagID":     "8888",
+			})
+			if err != nil {
+				return err
+			}
+			fmt.Printf("$$ [%s] COPY FILE [%s] FROM '%s' to '%s' [%s]\n", fieldname, fileData.ID, fileData.Src, dest, fileData.Dest)
 			return nil
+		}),
+		copyfile.WithSetValueCallback(func(ctx debefix.ValueCallbackResolveContext, fileData copyfile.FileData) (resolvedValue any, addField bool, err error) {
+			switch ctx.Table().ID {
+			case "tags":
+				return fmt.Sprintf("file-%s.png", ctx.Row().Fields["tag_name"]), true, nil
+			default:
+				return nil, false, nil
+			}
 		}),
 	)
 
@@ -46,12 +64,14 @@ func run() error {
 		return err
 	}
 
-	_, err = debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
+	resolvedData, err := debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
 		return nil
 	}, resolveOptions...)
 	if err != nil {
 		return err
 	}
+
+	spew.Dump(resolvedData)
 
 	return nil
 }
