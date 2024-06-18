@@ -47,7 +47,11 @@ func run() error {
 	_, loadOptions, resolveOptions := copyfile.NewOptions(
 		copyfile.WithCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) error {
 			p := copyfile.Parse(fileData.Dest)
-			replaceValues, err := ctx.ResolvedData().ExtractValues(ctx.Row(), p.Fields()...)
+			rmap := map[string]string{}
+			for _, fld := range p.Fields() {
+				rmap[fld] = fld
+			}
+			replaceValues, err := ctx.ResolvedData().ExtractValues(ctx.Row(), rmap)
 			if err != nil {
 				return err
 			}
