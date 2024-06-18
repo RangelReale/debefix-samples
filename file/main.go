@@ -25,6 +25,8 @@ func run() error {
       - tenant_id: 987
         name: "Joomla"
   tags:
+    config:
+      depends: ["tenants"]
     rows:
       - tag_id: 559
         tenant_id: 987
@@ -37,17 +39,20 @@ func run() error {
           id: tag_image
           setValue: true
           src: "images/tags/javascript.png"
-          dest: "tenant/{tenantID}/images/tags/{tagID}.png"
+          dest: "tenant/{valueref:tenant_id:tenants:tenant_id:name}/images/tags/{value:tag_id}.png"
 `),
 		},
 	})
 
 	_, loadOptions, resolveOptions := copyfile.NewOptions(
 		copyfile.WithCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) error {
-			dest, err := copyfile.Replace(fileData.Dest, map[string]any{
-				"tenantID": ctx.Row().Fields["tenant_id"],
-				"tagID":    ctx.Row().Fields["tag_id"],
-			})
+			p := copyfile.Parse(fileData.Dest)
+			replaceValues, err := ctx.ResolvedData().ExtractValues(ctx.Row(), p.Fields()...)
+			if err != nil {
+				return err
+			}
+
+			dest, err := copyfile.Replace(fileData.Dest, replaceValues)
 			if err != nil {
 				return err
 			}

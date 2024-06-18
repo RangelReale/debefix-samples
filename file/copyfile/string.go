@@ -35,6 +35,10 @@ func Parse(str string) *ParsedString {
 	return ret
 }
 
+func (s *ParsedString) Fields() []string {
+	return maps.Keys(s.fields)
+}
+
 func (s *ParsedString) Replace(values map[string]any) (string, error) {
 	fields := maps.Values(s.fields)
 	slices.SortFunc(fields, func(a, b parsedStringField) int {
