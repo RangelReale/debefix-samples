@@ -37,39 +37,31 @@ func run() error {
         tagfilename:
           !copyfile
           id: tag_image
-          setValue: true
-          src: "images/tags/javascript.png"
-          dest: "tenant/{valueref:tenant_id:tenants:tenant_id:name}/images/tags/{value:tag_id}.png"
+          #value: "{value:tag_id}.png"
+          source: "images/tags/javascript.png"
+          destination: "tenant/{valueref:tenant_id:tenants:tenant_id:name}/images/tags/{value:tag_id}.png"
 `),
 		},
 	})
 
 	_, loadOptions, resolveOptions := copyfile.NewOptions(
-		copyfile.WithCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) error {
-			p := copyfile.Parse(fileData.Dest)
-			rmap := map[string]string{}
-			for _, fld := range p.Fields() {
-				rmap[fld] = fld
-			}
-			replaceValues, err := ctx.ResolvedData().ExtractValues(ctx.Row(), rmap)
-			if err != nil {
-				return err
-			}
-
-			dest, err := copyfile.Replace(fileData.Dest, replaceValues)
-			if err != nil {
-				return err
-			}
-			fmt.Printf("$$ [%s] COPY FILE [%s] FROM '%s' to '%s' [%s]\n", fieldname, fileData.ID, fileData.Src, dest, fileData.Dest)
-			return nil
+		copyfile.WithSourcePath("/tmp/source"),
+		copyfile.WithDestinationPath("/tmp/destination"),
+		copyfile.WithGetPathsCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) (source string, destination string, err error) {
+			return copyfile.DefaultGetPathsCallback(ctx, fieldname, fileData)
 		}),
-		copyfile.WithSetValueCallback(func(ctx debefix.ValueCallbackResolveContext, fileData copyfile.FileData) (resolvedValue any, addField bool, err error) {
-			switch ctx.Table().ID {
-			case "tags":
-				return fmt.Sprintf("file-%s.png", ctx.Row().Fields["tag_name"]), true, nil
-			default:
-				return nil, false, nil
-			}
+		copyfile.WithGetValueCallback(func(ctx debefix.ValueCallbackResolveContext, fileData copyfile.FileData) (value any, addField bool, err error) {
+			return copyfile.DefaultGetValueCallback(ctx, fileData)
+			// switch ctx.Table().ID {
+			// case "tags":
+			// 	return fmt.Sprintf("file-%s.png", ctx.Row().Fields["tag_name"]), true, nil
+			// default:
+			// 	return copyfile.DefaultGetValueCallback(ctx, fileData)
+			// }
+		}),
+		copyfile.WithCopyFileCallback(func(sourceFilename, destinationFilename string) error {
+			fmt.Printf("Copying file %s to %s\n", sourceFilename, destinationFilename)
+			return nil
 		}),
 	)
 
