@@ -6,7 +6,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/rrgmc/debefix"
-	"github.com/rrgmc/debefix-samples/file/copyfile"
+	"github.com/rrgmc/debefix-copyfile"
 )
 
 func main() {
