@@ -20,9 +20,14 @@ func run() error {
 	provider := debefix.NewFSFileProvider(fstest.MapFS{
 		"users.dbf.yaml": &fstest.MapFile{
 			Data: []byte(`tables:
+  tenants:
+    rows:
+      - tenant_id: 987
+        name: "Joomla"
   tags:
     rows:
-      - tag_id: 1
+      - tag_id: 559
+        tenant_id: 987
         tag_name: "javascript"
         _metadata:
           !metadata
@@ -32,7 +37,7 @@ func run() error {
           id: tag_image
           setValue: true
           src: "images/tags/javascript.png"
-          dest: "company/{companyID}/images/tags/{tagID}.png"
+          dest: "tenant/{tenantID}/images/tags/{tagID}.png"
 `),
 		},
 	})
@@ -40,8 +45,8 @@ func run() error {
 	_, loadOptions, resolveOptions := copyfile.NewOptions(
 		copyfile.WithCallback(func(ctx debefix.ValueResolveContext, fieldname string, fileData copyfile.FileData) error {
 			dest, err := copyfile.Replace(fileData.Dest, map[string]any{
-				"companyID": "6666",
-				"tagID":     "8888",
+				"tenantID": ctx.Row().Fields["tenant_id"],
+				"tagID":    ctx.Row().Fields["tag_id"],
 			})
 			if err != nil {
 				return err

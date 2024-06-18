@@ -26,7 +26,7 @@ func (c *CopyFile) ParseValue(tag *ast.TagNode) (bool, any, error) {
 	}
 
 	var fileData FileData
-	err := yaml.NodeToValue(tag.Value, &fileData)
+	err := yaml.NodeToValue(tag.Value, &fileData, yaml.Strict())
 	if err != nil {
 		return false, nil, err
 	}

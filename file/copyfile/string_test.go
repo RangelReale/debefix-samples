@@ -18,51 +18,51 @@ func TestParse(t *testing.T) {
 	}{
 		{
 			name: "simple",
-			str:  "test {company} sample {nonna}",
+			str:  "test {tenant} sample {nonna}",
 			expectedFields: map[string]string{
-				"company": "",
-				"nonna":   "",
+				"tenant": "",
+				"nonna":  "",
 			},
 		},
 		{
 			name: "not closed",
-			str:  "test {company} sample {nonna",
+			str:  "test {tenant} sample {nonna",
 			expectedFields: map[string]string{
-				"company": "",
+				"tenant": "",
 			},
 		},
 		{
 			name: "not open",
-			str:  "test company} sample {nonna}",
+			str:  "test tenant} sample {nonna}",
 			expectedFields: map[string]string{
 				"nonna": "",
 			},
 		},
 		{
 			name: "escaped open",
-			str:  "test {{company} sample {nonna}",
+			str:  "test {{tenant} sample {nonna}",
 			expectedFields: map[string]string{
 				"nonna": "",
 			},
 		},
 		{
 			name: "escaped close",
-			str:  "test {company}} sample {nonna}",
+			str:  "test {tenant}} sample {nonna}",
 			expectedFields: map[string]string{
-				"company} sample {nonna": "{company}} sample {nonna}",
+				"tenant} sample {nonna": "{tenant}} sample {nonna}",
 			},
 		},
 		{
 			name: "escaped repeated",
-			str:  "test {{{company} sample {nonna}",
+			str:  "test {{{tenant} sample {nonna}",
 			expectedFields: map[string]string{
-				"company": "",
-				"nonna":   "",
+				"tenant": "",
+				"nonna":  "",
 			},
 		},
 		{
 			name: "escaped repeated 4",
-			str:  "test {{{{company} sample {nonna}",
+			str:  "test {{{{tenant} sample {nonna}",
 			expectedFields: map[string]string{
 				"nonna": "",
 			},
@@ -93,34 +93,34 @@ func TestReplace(t *testing.T) {
 	}{
 		{
 			name: "simple",
-			str:  "test {company} sample {nonna}",
+			str:  "test {tenant} sample {nonna}",
 			values: map[string]any{
-				"company": "666",
-				"nonna":   "888",
+				"tenant": "666",
+				"nonna":  "888",
 			},
 			expected: "test 666 sample 888",
 		},
 		{
 			name: "missing",
-			str:  "test {company} sample {nonna}",
+			str:  "test {tenant} sample {nonna}",
 			values: map[string]any{
-				"company": "666",
+				"tenant": "666",
 			},
 			expectedErr: true,
 		},
 		{
 			name: "escape left",
-			str:  "test {{company} sample {nonna}",
+			str:  "test {{tenant} sample {nonna}",
 			values: map[string]any{
 				"nonna": "888",
 			},
-			expected: "test {{company} sample 888",
+			expected: "test {{tenant} sample 888",
 		},
 		{
 			name: "escape right",
-			str:  "test {company}} sample {nonna}",
+			str:  "test {tenant}} sample {nonna}",
 			values: map[string]any{
-				"company} sample {nonna": "666",
+				"tenant} sample {nonna": "666",
 			},
 			expected: "test 666",
 		},
