@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"path/filepath"
 	"testing/fstest"
 
 	"github.com/davecgh/go-spew/spew"
@@ -27,6 +28,13 @@ func run() error {
   tags:
     config:
       depends: ["tenants"]
+      default_values:
+        tagfilename:
+          !copyfile
+          id: tag_image
+          value: "{value:tag_id}.png"
+          source: "images/tags/javascript.png"
+          destination: "tenant/{valueref:tenant_id:tenants:tenant_id:name}/images/tags/{value:tag_id}.png"
     rows:
       - tag_id: 559
         tenant_id: 987
@@ -34,12 +42,6 @@ func run() error {
         _metadata:
           !metadata
           filedata: "best"
-        tagfilename:
-          !copyfile
-          id: tag_image
-          #value: "{value:tag_id}.png"
-          source: "images/tags/javascript.png"
-          destination: "tenant/{valueref:tenant_id:tenants:tenant_id:name}/images/tags/{value:tag_id}.png"
 `),
 		},
 	})
@@ -59,8 +61,9 @@ func run() error {
 			// 	return copyfile.DefaultGetValueCallback(ctx, fileData)
 			// }
 		}),
-		copyfile.WithCopyFileCallback(func(sourceFilename, destinationFilename string) error {
-			fmt.Printf("Copying file %s to %s\n", sourceFilename, destinationFilename)
+		copyfile.WithCopyFileCallback(func(sourcePath, sourceFilename string, destinationPath, destinationFilename string) error {
+			fmt.Printf("Copying file %s to %s\n", filepath.Join(sourcePath, sourceFilename),
+				filepath.Join(destinationPath, destinationFilename))
 			return nil
 		}),
 	)
