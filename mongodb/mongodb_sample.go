@@ -2,38 +2,22 @@ package main
 
 import (
 	"context"
-	"errors"
 	"fmt"
-	"path/filepath"
-	"runtime"
 
-	"github.com/rrgmc/debefix"
-	debefix_mongodb "github.com/rrgmc/debefix-mongodb"
+	debefix_mongodb "github.com/rrgmc/debefix-mongodb/v2"
+	data2 "github.com/rrgmc/debefix-samples/v2/data"
+	"github.com/rrgmc/debefix/v2"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func currentSourceDirectory() (string, error) {
-	_, filename, _, ok := runtime.Caller(0)
-	if !ok {
-		return "", errors.New("unable to get the current filename")
-	}
-	return filepath.Dir(filename), nil
-}
-
 func main() {
-	curDir, err := currentSourceDirectory()
-	if err != nil {
-		panic(err)
-	}
-
 	ctx := context.Background()
 
 	fmt.Println("loading data...")
-	data, err := debefix.Load(debefix.NewDirectoryFileProvider(filepath.Join(curDir, "data"),
-		debefix.WithDirectoryAsTag()))
-	if err != nil {
-		panic(err)
+	data := data2.Data()
+	if data.Err() != nil {
+		panic(data.Err())
 	}
 
 	// spew.Dump(data)
@@ -44,9 +28,7 @@ func main() {
 		panic(err)
 	}
 
-	resolveTags := []string{}
-
-	err = debefix.ResolveCheck(data, debefix.WithResolveTags(resolveTags))
+	err = debefix.ResolveCheck(ctx, data)
 	if err != nil {
 		panic(err)
 	}

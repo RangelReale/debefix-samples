@@ -2,70 +2,54 @@ package main
 
 import (
 	"context"
-	"errors"
 	"fmt"
-	"path/filepath"
-	"runtime"
 	"strings"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/google/uuid"
-	"github.com/rrgmc/debefix"
-	"github.com/rrgmc/debefix/db/sql"
-	"github.com/rrgmc/debefix/db/sql/postgres"
+	"github.com/rrgmc/debefix-db/v2/sql"
+	"github.com/rrgmc/debefix-db/v2/sql/postgres"
+	data2 "github.com/rrgmc/debefix-samples/v2/data"
+	"github.com/rrgmc/debefix/v2"
 )
 
-func currentSourceDirectory() (string, error) {
-	_, filename, _, ok := runtime.Caller(0)
-	if !ok {
-		return "", errors.New("unable to get the current filename")
-	}
-	return filepath.Dir(filename), nil
-}
-
 func main() {
-	curDir, err := currentSourceDirectory()
-	if err != nil {
-		panic(err)
-	}
+	ctx := context.Background()
 
-	data, err := debefix.Load(debefix.NewDirectoryFileProvider(filepath.Join(curDir, "data"),
-		debefix.WithDirectoryAsTag()))
-	if err != nil {
-		panic(err)
+	data := data2.Data()
+	if data.Err() != nil {
+		panic(data.Err())
 	}
 
 	// spew.Dump(data)
 
-	resolveTags := []string{}
-
-	err = debefix.ResolveCheck(data, debefix.WithResolveTags(resolveTags))
+	err := debefix.ResolveCheck(ctx, data)
 	if err != nil {
 		panic(err)
 	}
 
-	// err = resolvePrint(data, resolveTags)
+	// err = resolvePrint(ctx, data)
 	// if err != nil {
 	// 	panic(err)
 	// }
 
-	err = resolveSQL(context.Background(), data, resolveTags)
+	err = resolveSQL(ctx, data)
 	if err != nil {
 		panic(err)
 	}
 }
 
-func resolvePrint(data *debefix.Data, resolveTags []string) error {
-	_, err := debefix.Resolve(data, func(ctx debefix.ResolveContext, fields map[string]any) error {
-		fmt.Printf("%s %s %s\n", strings.Repeat("=", 10), ctx.TableName(), strings.Repeat("=", 10))
-		spew.Dump(fields)
+func resolvePrint(ctx context.Context, data *debefix.Data) error {
+	_, err := debefix.Resolve(ctx, data, func(ctx context.Context, resolveInfo debefix.ResolveInfo, values debefix.ValuesMutable) error {
+		fmt.Printf("%s %s %s\n", strings.Repeat("=", 10), resolveInfo.TableID.TableName(), strings.Repeat("=", 10))
+		spew.Dump(values)
 
 		resolved := map[string]any{}
-		for fn, fv := range fields {
+		for fn, fv := range values.All {
 			if fresolve, ok := fv.(debefix.ResolveValue); ok {
 				switch fresolve.(type) {
-				case *debefix.ResolveGenerate:
-					ctx.ResolveField(fn, uuid.New())
+				case debefix.ResolveValue:
+					values.Set(fn, uuid.New())
 					resolved[fn] = uuid.New()
 				}
 			}
@@ -77,11 +61,11 @@ func resolvePrint(data *debefix.Data, resolveTags []string) error {
 		}
 
 		return nil
-	}, debefix.WithResolveTags(resolveTags))
+	})
 	return err
 }
 
-func resolveSQL(ctx context.Context, data *debefix.Data, resolveTags []string) error {
-	_, err := postgres.Resolve(ctx, sql.NewDebugQueryInterface(nil), data, debefix.WithResolveTags(resolveTags))
+func resolveSQL(ctx context.Context, data *debefix.Data) error {
+	_, err := debefix.Resolve(ctx, data, postgres.ResolveFunc(sql.NewDebugQueryInterface(nil)))
 	return err
 }
