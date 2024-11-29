@@ -7,9 +7,15 @@ tasks:
   start-db:
     cmds:
       - docker run --rm  -p 5478:5432 -e POSTGRES_HOST_AUTH_METHOD=trust debefix-sample-sakila
+  stop-db:
+    cmds:
+      - docker stop debefix-sample-sakila
   create-db-original:
     cmds:
       - docker build -f Dockerfile-original --progress=plain -t debefix-sample-sakila-original .
   start-db-original:
     cmds:
       - docker run --rm  -p 5479:5432 -e POSTGRES_HOST_AUTH_METHOD=trust debefix-sample-sakila-original
+  stop-db-original:
+    cmds:
+      - docker stop debefix-sample-sakila-original
