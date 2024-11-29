@@ -1,5 +1,7 @@
 # debefix-samples
 
+### WARNNG: v1 is deprecated, use v2 instead.
+
 Samples for [debefix](https://github.com/rrgmc/debefix), a Go library to seed database data and/or create 
 fixtures for DB tests.
 
