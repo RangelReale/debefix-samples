@@ -82,8 +82,8 @@ func run() error {
 				}
 			}),
 			copyfile.WithProcessResolveCallback(func(ctx context.Context, resolvedData *debefix.ResolvedData,
-				fieldName string, values debefix.ValuesMutable, item copyfile.Value, reader copyfile.FileReader,
-				writer copyfile.FileWriter) error {
+				tableID debefix.TableID, fieldName string, values debefix.ValuesMutable, item copyfile.Value,
+				reader copyfile.FileReader, writer copyfile.FileWriter) error {
 				fmt.Printf("Copying file %s to %s\n", reader, writer)
 				return nil
 			}),
