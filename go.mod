@@ -3,6 +3,7 @@ module github.com/rrgmc/debefix-samples/v2
 go 1.23
 
 require (
+	github.com/dave/jennifer v1.7.1
 	github.com/davecgh/go-spew v1.1.1
 	github.com/goccy/go-yaml v1.11.3
 	github.com/google/uuid v1.6.0
