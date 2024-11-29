@@ -8,10 +8,10 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/iancoleman/strcase v0.3.0
 	github.com/jackc/pgx/v5 v5.6.0
-	github.com/rrgmc/debefix-db/v2 v2.0.1
+	github.com/rrgmc/debefix-db/v2 v2.0.2
 	github.com/rrgmc/debefix-mongodb/v2 v2.0.0
 	github.com/rrgmc/debefix-value/v2 v2.0.5
-	github.com/rrgmc/debefix/v2 v2.0.3
+	github.com/rrgmc/debefix/v2 v2.0.4
 	go.mongodb.org/mongo-driver v1.12.1
 )
 
