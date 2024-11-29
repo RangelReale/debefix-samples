@@ -64,6 +64,9 @@ func importFixtures(ctx context.Context) error {
 			}
 			return debugQI.Query(ctx, tableID, query, returnFieldNames, args...)
 		})))
+	if err != nil {
+		return err
+	}
 
 	fmt.Printf("INSERTED: %d\n", insertCount)
 

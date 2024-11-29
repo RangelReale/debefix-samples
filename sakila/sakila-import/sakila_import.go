@@ -74,35 +74,35 @@ func importData() error {
 			panic(err)
 		}
 
-		err = importTable(dataGroup, db, "address", []string{"city"}, sdata)
-		if err != nil {
-			panic(err)
-		}
-
-		err = importTable(dataGroup, db, "actor", nil, sdata)
-		if err != nil {
-			panic(err)
-		}
-
-		err = importTable(dataGroup, db, "category", nil, sdata)
-		if err != nil {
-			panic(err)
-		}
-
-		err = importTable(dataGroup, db, "film", nil, sdata)
-		if err != nil {
-			panic(err)
-		}
-
-		err = importTable(dataGroup, db, "film_category", nil, sdata)
-		if err != nil {
-			panic(err)
-		}
-
-		err = importTable(dataGroup, db, "film_actor", nil, sdata)
-		if err != nil {
-			panic(err)
-		}
+		// err = importTable(dataGroup, db, "address", []string{"city"}, sdata)
+		// if err != nil {
+		// 	panic(err)
+		// }
+		//
+		// err = importTable(dataGroup, db, "actor", nil, sdata)
+		// if err != nil {
+		// 	panic(err)
+		// }
+		//
+		// err = importTable(dataGroup, db, "category", nil, sdata)
+		// if err != nil {
+		// 	panic(err)
+		// }
+		//
+		// err = importTable(dataGroup, db, "film", nil, sdata)
+		// if err != nil {
+		// 	panic(err)
+		// }
+		//
+		// err = importTable(dataGroup, db, "film_category", nil, sdata)
+		// if err != nil {
+		// 	panic(err)
+		// }
+		//
+		// err = importTable(dataGroup, db, "film_actor", nil, sdata)
+		// if err != nil {
+		// 	panic(err)
+		// }
 
 		// store and staff depends on each other, more complex logic would be needed to export in the correct order
 
@@ -265,7 +265,7 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 				if sfd, ok := row[s.Fieldname]; ok {
 					row[s.Fieldname] = CodeProvider(func() Code {
 						return Qual("github.com/rrgmc/debefix/v2", "ValueRefID").
-							Call(Id(getTableVar(tableName)), Lit(s.RefID[sfd]), Lit(s.Fieldname))
+							Call(Id(getTableVar(s.Tablename)), Lit(s.RefID[sfd]), Lit(s.Fieldname))
 					})
 				}
 			}
