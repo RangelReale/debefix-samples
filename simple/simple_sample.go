@@ -47,11 +47,12 @@ func resolvePrint(ctx context.Context, data *debefix.Data) error {
 		resolved := map[string]any{}
 		for fn, fv := range values.All {
 			if fresolve, ok := fv.(debefix.ResolveValue); ok {
-				switch fresolve.(type) {
-				case debefix.ResolveValue:
-					values.Set(fn, uuid.New())
-					resolved[fn] = uuid.New()
+				rv, err := fresolve.ResolveValueParse(ctx, uuid.New())
+				if err != nil {
+					return fmt.Errorf("error parsing resolve value '%s': %w", fn, err)
 				}
+				values.Set(fn, rv)
+				resolved[fn] = rv
 			}
 		}
 
