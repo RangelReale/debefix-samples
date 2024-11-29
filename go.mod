@@ -10,7 +10,7 @@ require (
 	github.com/jackc/pgx/v5 v5.6.0
 	github.com/rrgmc/debefix-db/v2 v2.0.1
 	github.com/rrgmc/debefix-mongodb/v2 v2.0.0
-	github.com/rrgmc/debefix-value/v2 v2.0.4
+	github.com/rrgmc/debefix-value/v2 v2.0.5
 	github.com/rrgmc/debefix/v2 v2.0.3
 	go.mongodb.org/mongo-driver v1.12.1
 )

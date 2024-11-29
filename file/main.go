@@ -71,7 +71,8 @@ func run() error {
 			return nil
 		},
 		debefix.WithResolveOptionProcess(copyfile.NewProcess(
-			copyfile.WithProcessFilenameProvider(func(ctx context.Context, fileField copyfile.FileField, info any, filename string) (string, error) {
+			copyfile.WithProcessFilenameProvider(func(ctx context.Context, fileField copyfile.FileField,
+				item copyfile.Value, tableID debefix.TableID, filename string) (string, error) {
 				switch fileField {
 				case copyfile.FileFieldSource:
 					return filepath.Join("/tmp/source", filename), nil

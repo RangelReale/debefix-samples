@@ -30,8 +30,8 @@ github.com/rrgmc/debefix-db/v2 v2.0.1 h1:lz9HOlUekG+MeQ80NNWSWXyjk95sMg+ICH7hF+s
 github.com/rrgmc/debefix-db/v2 v2.0.1/go.mod h1:sgxkFde8QDmH3pN6zztZf/xRZQVKUOMUig225t65RY8=
 github.com/rrgmc/debefix-mongodb/v2 v2.0.0 h1:sxDO0K7Id3vm4PJ+0dnBZkCIrxtFJm4RD7QPM2Bmq34=
 github.com/rrgmc/debefix-mongodb/v2 v2.0.0/go.mod h1:sizdUneoI8gtxd6YLOe6EYGYmbQrg3VGDHhCH2fsEmY=
-github.com/rrgmc/debefix-value/v2 v2.0.4 h1:brepEvIr3xfLexzUAXOIj7rdQrPaK+gSqyyOloiJcoE=
-github.com/rrgmc/debefix-value/v2 v2.0.4/go.mod h1:HfdjBW4F+o/YS/kUo2zowIzMp0t66x4KiL2bi+o3Wdc=
+github.com/rrgmc/debefix-value/v2 v2.0.5 h1:aut4LBw7u6ZhBBHNzZ/mBwavpJCKMd/QEcmA+zfO4ac=
+github.com/rrgmc/debefix-value/v2 v2.0.5/go.mod h1:HfdjBW4F+o/YS/kUo2zowIzMp0t66x4KiL2bi+o3Wdc=
 github.com/rrgmc/debefix/v2 v2.0.3 h1:QqXakmArrFXUis2BCuhmk6nDYGRNZwI+6d9PHw6Q6fM=
 github.com/rrgmc/debefix/v2 v2.0.3/go.mod h1:tTmdqXfGlRtl38Jlxa4+kUiYIi0tsuzrgGRQcsTMsQQ=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
