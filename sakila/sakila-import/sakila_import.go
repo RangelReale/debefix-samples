@@ -200,23 +200,22 @@ func importTable(dataGroup *Group, db *sql.DB, tableName string, deps []string, 
 		dataGroup.Var().Id(tableVar).Op("=").
 			Qual("github.com/rrgmc/debefix/v2", "TableName").Call(Lit(table.Config.TableName))
 
-		dataGroup.Id("data").Dot("AddValues").CallFunc(func(addGroup *Group) {
-			addGroup.Id(tableVar)
-			for _, row := range table.Rows {
-				addGroup.Qual("github.com/rrgmc/debefix/v2", "MapValues").Values(DictFunc(func(dict Dict) {
-					for fn, fv := range row {
-						switch cp := fv.(type) {
-						case CodeProvider:
-							dict[Lit(fn)] = cp()
-						case nil:
-							dict[Lit(fn)] = Nil()
-						default:
-							dict[Lit(fn)] = Lit(fv)
+		for _, row := range table.Rows {
+			dataGroup.Id("data").Dot("Add").Call(Id(tableVar),
+				Qual("github.com/rrgmc/debefix/v2", "MapValues").
+					Values(DictFunc(func(dict Dict) {
+						for fn, fv := range row {
+							switch cp := fv.(type) {
+							case CodeProvider:
+								dict[Lit(fn)] = cp()
+							case nil:
+								dict[Lit(fn)] = Nil()
+							default:
+								dict[Lit(fn)] = Lit(fv)
+							}
 						}
-					}
-				}))
-			}
-		})
+					})))
+		}
 	}
 
 	return nil
@@ -268,30 +267,16 @@ func importTableRows(db *sql.DB, rows *sql.Rows, tableName string, sdata []*spec
 						return Qual("github.com/rrgmc/debefix/v2", "ValueRefID").
 							Call(Id(getTableVar(tableName)), Lit(s.RefID[sfd]), Lit(s.Fieldname))
 					})
-					// row[s.Fieldname] = TaggedString{
-					// 	Tag:   "!expr",
-					// 	Value: fmt.Sprintf("refid:%s:%s:%s", s.Tablename, s.RefID[sfd], s.Fieldname),
-					// }
 				}
 			}
 		}
 
 		if rowConfig != nil {
 			if rowConfig.RefID != "" {
-				// row["_refid"] = &TaggedValue{
-				// 	Tag:   "!refid",
-				// 	Value: rowConfig.RefID,
-				// }
 				row["_refid"] = CodeProvider(func() Code {
 					return Qual("github.com/rrgmc/debefix/v2", "SetValueRefID").Call(Lit(rowConfig.RefID))
 				})
 			}
-			// if len(rowConfig.Tags) > 0 {
-			// 	row["_tags"] = &TaggedValue{
-			// 		Tag:   "!tags",
-			// 		Value: rowConfig.Tags,
-			// 	}
-			// }
 		}
 
 		if customize != nil {

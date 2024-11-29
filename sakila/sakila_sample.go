@@ -65,25 +65,6 @@ func importFixtures(ctx context.Context) error {
 			return debugQI.Query(ctx, tableID, query, returnFieldNames, args...)
 		})))
 
-	// _, err = postgres.GenerateDirectory(ctx, filepath.Join(curDir, "fixtures"),
-	// 	dbsql.QueryInterfaceFunc(func(ctx context.Context, databaseName, tableName string, query string, returnFieldNames []string, args ...any) (map[string]any, error) {
-	// 		insertCount++
-	// 		if sqlQueryInterface != nil {
-	// 			return sqlQueryInterface.Query(ctx, databaseName, tableName, query, returnFieldNames, args...)
-	// 		}
-	// 		return debugQI.Query(ctx, databaseName, tableName, query, returnFieldNames, args...)
-	// 	}),
-	// 	debefix.WithLoadProgress(func(filename string) {
-	// 		fmt.Printf("Loading file %s...\n", filename)
-	// 	}),
-	// 	debefix.WithGenerateResolveCheck(true),
-	// 	debefix.WithResolveProgress(func(tableID, databaseName, tableName string) {
-	// 		fmt.Printf("Importing table %s...\n", tableName)
-	// 	}))
-	// if err != nil {
-	// 	panic(err)
-	// }
-
 	fmt.Printf("INSERTED: %d\n", insertCount)
 
 	return nil
