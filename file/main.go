@@ -38,7 +38,7 @@ func run() error {
 		"tag_name":  "javascript",
 		"_copyfile": copyfile.New(nil,
 			copyfile.Filename("images/tags/javascript.png"),
-			copyfile.FilenameFormatTemplate("tenant/{{.tenant_name}}/images/tags/{{.tag_id}}.png", map[string]any{
+			copyfile.FilenameTemplate("tenant/{{.tenant_name}}/images/tags/{{.tag_id}}.png", map[string]any{
 				"tenant_name": tenantIID.ValueForField("name"),
 				"tag_id":      debefix.ValueFieldValue("tag_id"),
 			})),
